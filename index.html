@@ -1,175 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Evandro Camargo</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #0f0f0f;
-    color: #f2f2f2;
-    line-height: 1.8;
-}
+  :root{
+    --bg:#0f0f0f;
+    --text:#f2f2f2;
+    --muted:#cfcfcf;
+    --soft:#b6b6b6;
+    --line:rgba(255,255,255,.08);
+  }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 100px 40px;
-}
+  body{
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.85;
+    letter-spacing:.1px;
+  }
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-}
+  .container{
+    max-width:1100px;
+    margin:auto;
+    padding:96px 40px;
+  }
 
-.hero-text h1 {
-    font-size: 46px;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
+  .hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:64px;
+    padding-bottom:56px;
+    border-bottom:1px solid var(--line);
+  }
 
-.hero-text h3 {
-    font-weight: 400;
-    color: #bbbbbb;
-    margin-bottom: 30px;
-}
+  .hero h1{
+    font-size:46px;
+    font-weight:520;
+    margin:0 0 14px 0;
+  }
 
-.hero img {
-    width: 380px;
-    border-radius: 6px;
-}
+  .hero .tagline{
+    font-size:18px;
+    color:var(--muted);
+    margin:0;
+    max-width:560px;
+  }
 
-.section {
-    margin-top: 120px;
-    max-width: 850px;
-}
+  .hero img{
+    width:380px;
+    border-radius:8px;
+    display:block;
+    box-shadow: 0 24px 60px rgba(0,0,0,.35);
+  }
 
-.section h2 {
-    font-size: 26px;
-    font-weight: 500;
-    margin-bottom: 30px;
-}
+  .section{
+    margin-top:72px;
+    max-width:860px;
+  }
 
-.section p {
-    margin-bottom: 25px;
-    color: #d0d0d0;
-}
+  .section h2{
+    font-size:24px;
+    font-weight:520;
+    margin:0 0 18px 0;
+  }
 
-.highlight {
-    font-size: 20px;
-    margin: 40px 0;
-    color: #ffffff;
-}
+  .section p{
+    margin:0 0 18px 0;
+    color:var(--muted);
+    font-size:17px;
+  }
 
-.contact a {
-    color: #f2f2f2;
-    text-decoration: none;
-}
+  .lead{
+    color:var(--text);
+    font-size:18px;
+  }
 
-.contact a:hover {
-    opacity: 0.7;
-}
+  .pullquote{
+    margin:28px 0 26px 0;
+    padding:18px 20px;
+    border-left:2px solid rgba(255,255,255,.22);
+    color:var(--text);
+    font-size:18px;
+  }
 
-.footer {
-    margin-top: 160px;
-    font-size: 14px;
-    color: #666;
-}
+  .micro{
+    color:var(--soft);
+    font-size:15px;
+    margin-top:10px;
+  }
 
-@media(max-width: 900px){
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero img {
-        width: 280px;
-    }
-}
+  .bullets{
+    margin:18px 0 0 0;
+    padding:0;
+    list-style:none;
+  }
+  .bullets li{
+    margin:10px 0;
+    color:var(--muted);
+    font-size:17px;
+  }
+  .bullets li::before{
+    content:"• ";
+    color:var(--text);
+    opacity:.9;
+  }
+
+  a{
+    color:var(--text);
+    text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,.18);
+    padding-bottom:1px;
+  }
+  a:hover{
+    opacity:.8;
+  }
+
+  .split{
+    margin-top:72px;
+    padding-top:56px;
+    border-top:1px solid var(--line);
+  }
+
+  .identity{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:8px;
+    margin-top:10px;
+  }
+
+  .contact{
+    margin-top:14px;
+    color:var(--muted);
+    font-size:17px;
+  }
+  .contact .row{
+    margin:10px 0;
+  }
+
+  .footer{
+    margin-top:110px;
+    padding-top:26px;
+    border-top:1px solid var(--line);
+    color:#777;
+    font-size:13px;
+  }
+
+  @media (max-width: 920px){
+    .hero{flex-direction:column; text-align:center;}
+    .hero img{width:280px;}
+  }
 </style>
 </head>
 
 <body>
+  <div class="container">
 
-<div class="container">
-
-<div class="hero">
-    <div class="hero-text">
+    <!-- HERO -->
+    <div class="hero">
+      <div>
         <h1>Evandro Camargo</h1>
-        <h3>Strategic Mind. Refined Execution. Enduring Value.</h3>
-    </div>
-    <img src="/profile.png?v=20" alt="Evandro Camargo">
-</div>
+        <p class="tagline">Strategic Mind. Refined Execution. Enduring Value.</p>
+        <p class="micro">São Paulo · Global scope</p>
+      </div>
 
-<div class="section">
-    <p>Some careers are built on opportunity. Others are built on discipline.</p>
-
-    <p>With over a decade of experience navigating complex global supply chains, Evandro built his trajectory on structured thinking, measured risk, and disciplined execution across multinational environments.</p>
-
-    <div class="highlight">
-        Excellence is not accidental. It is engineered.
+      <!-- PHOTO (keep file as /profile.png in repo root) -->
+      <img src="/profile.png?v=31" alt="Evandro Camargo" />
     </div>
 
-    <p>His work spans forecasting methodologies, inventory architecture, optimization frameworks, and executive-level decision support. Fluent in SQL, Python, and analytical systems, he transforms operational complexity into structured performance.</p>
+    <!-- INTRO -->
+    <div class="section">
+      <p class="lead">Some careers are built on opportunity. Others are built on discipline.</p>
+      <p class="lead">Evandro Camargo belongs to the second category.</p>
 
-    <p>For him, sophistication is not about complexity. It is about clarity — making the difficult appear effortless.</p>
-</div>
+      <p>
+        With over a decade of experience navigating complex global supply chains, he developed a reputation for combining
+        analytical precision with strategic foresight. Operating in multinational environments, leading cross-regional
+        demand planning initiatives, and driving optimization programs across continents, he learned one fundamental truth:
+      </p>
 
-<div class="section">
-    <h2>The Strategic Foundation</h2>
+      <div class="pullquote">Excellence is not accidental. It is engineered.</div>
 
-    <p>• Disciplined decision-making architecture</p>
-    <p>• Global perspective with local execution sensitivity</p>
-    <p>• Financial awareness anchored in measurable outcomes</p>
-    <p>• Deep understanding of risk, variability, and value creation</p>
+      <p>
+        His work spans advanced forecasting methodologies, inventory strategy, data science applications, executive-level
+        reporting, and digital transformation. Fluent in SQL, Python, Tableau, and enterprise planning systems, Evandro
+        bridges technical intelligence with business impact — turning data into strategic advantage.
+      </p>
 
-    <p>Analytical yet intuitive. Strategic yet operational.</p>
-</div>
+      <p>But sophistication, for him, is not about complexity.</p>
+      <p>It is about clarity.</p>
+      <p>It is about making the difficult appear effortless.</p>
+    </div>
 
-<div class="section">
-    <h2>The Philosophy of Value</h2>
+    <!-- STRATEGIC FOUNDATION -->
+    <div class="section split">
+      <h2>The Strategic Foundation</h2>
 
-    <p>Parallel to his corporate trajectory, Evandro expanded his focus into brand development and refined asset positioning.</p>
+      <p>
+        Throughout his journey in global planning leadership roles, Evandro developed:
+      </p>
 
-    <p>As Commercial Director of 
-        <a href="https://www.instagram.com/arethusajoias/" target="_blank">@arethusajoias</a>, 
-        he applies the same principles of structure, positioning, and long-term value creation to the luxury sector.
-    </p>
+      <ul class="bullets">
+        <li>A disciplined approach to decision-making</li>
+        <li>A global mindset with local execution sensitivity</li>
+        <li>Financial acumen rooted in measurable outcomes</li>
+        <li>Deep understanding of risk, variability, and value creation</li>
+      </ul>
 
-    <p>For him, luxury is not excess.</p>
+      <p>
+        Certified in advanced supply chain methodologies and continuously expanding his academic horizon, he represents a rare
+        profile: analytical yet intuitive, strategic yet operational.
+      </p>
+    </div>
 
-    <div class="highlight">
-        Luxury is precision.<br>
-        Luxury is intentionality.<br>
+    <!-- PHILOSOPHY OF VALUE + ARETHUSA -->
+    <div class="section split">
+      <h2>The Philosophy of Value</h2>
+
+      <p>
+        Parallel to his corporate trajectory, Evandro cultivated an appreciation for timeless assets — businesses,
+        investments, and luxury products that retain meaning across time.
+      </p>
+
+      <p>
+        This philosophy led to the creation of a refined brand vision: one that blends structure with elegance, logic with
+        emotion, strategy with aesthetics.
+      </p>
+
+      <p class="lead">For him, luxury is not excess.</p>
+
+      <div class="pullquote">
+        Luxury is precision.<br />
+        Luxury is intentionality.<br />
         Luxury is permanence.
+      </div>
+
+      <p>
+        In the luxury sector, he serves as <strong>Commercial Director</strong> at
+        <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">@arethusajoias</a>,
+        applying the same discipline of positioning, execution, and long-term value creation to a refined brand context.
+      </p>
     </div>
-</div>
 
-<div class="section">
-    <h2>Contact</h2>
+    <!-- PERSONAL IDENTITY -->
+    <div class="section split">
+      <h2>Personal Identity</h2>
 
-    <div class="contact">
-        São Paulo · Global Scope<br><br>
+      <div class="identity">
+        <div class="bullets">
+          <div>• Brazilian by origin. Global by execution.</div>
+          <div>• Native Portuguese speaker. Full professional fluency in English.</div>
+          <div>• Strategic thinker with long-term orientation.</div>
+          <div>• Builder of systems. Builder of brands. Builder of value.</div>
+        </div>
+      </div>
 
-        <a href="https://www.linkedin.com/in/evandro-ferraz-camargo-efc/" target="_blank">
-            LinkedIn
-        </a><br><br>
-
-        <a href="mailto:ferrazcamargo@email.com">
-            ferrazcamargo@email.com
-        </a>
+      <p>
+        Behind the data models and executive dashboards exists a disciplined professional guided by continuous improvement,
+        personal integrity, and long-term thinking.
+      </p>
     </div>
-</div>
 
-<div class="footer">
-© 2026 Evandro Camargo
-</div>
+    <!-- CONTACT (kept as we fixed: links + line breaks) -->
+    <div class="section split">
+      <h2>Contact</h2>
 
-</div>
+      <div class="contact">
+        <div class="row">São Paulo · Global Scope</div>
 
+        <div class="row">
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/evandro-ferraz-camargo-efc/" target="_blank" rel="noopener">
+            evandro-ferraz-camargo-efc
+          </a>
+        </div>
+
+        <div class="row">
+          Email:
+          <a href="mailto:ferrazcamargo@email.com">ferrazcamargo@email.com</a>
+        </div>
+
+        <div class="row">
+          Instagram:
+          <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">
+            @arethusajoias
+          </a>
+          <span style="opacity:.75;">(Commercial Director)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">© 2026 Evandro Camargo</div>
+
+  </div>
 </body>
 </html>
