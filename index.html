@@ -37,6 +37,7 @@
 
   *{ box-sizing:border-box; }
   html{ scroll-behavior:smooth; }
+
   body{
     margin:0;
     font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -104,14 +105,6 @@
     letter-spacing:.2px;
     font-size:22px;
     color:var(--accent);
-    white-space:nowrap;
-  }
-  .brand .sub{
-    font-size:12px;
-    letter-spacing:.36em;
-    text-transform:uppercase;
-    color:var(--soft);
-    opacity:.9;
     white-space:nowrap;
   }
 
@@ -380,12 +373,11 @@
     <div class="nav-inner">
       <div class="brand">
         <div class="name">Evandro Camargo</div>
-  
       </div>
 
       <div class="nav-links" aria-label="Primary">
         <a href="#about" data-nav="about" class="active" data-i18n="nav_about">About</a>
-        <a href="#Professional Path" data-nav="Professional Path" data-i18n="nav_Professional Path">Professional Path</a>
+        <a href="#path" data-nav="path" data-i18n="nav_path">Professional Path</a>
         <a href="#foundation" data-nav="foundation" data-i18n="nav_foundation">Foundation</a>
         <a href="#value" data-nav="value" data-i18n="nav_value">Philosophy</a>
         <a href="#contact" data-nav="contact" data-i18n="nav_contact">Contact</a>
@@ -436,36 +428,35 @@
       <p data-i18n="intro_8">It is about making the difficult appear effortless.</p>
     </div>
 
-    <!-- Professional Path -->
-    <div class="section split" id="Professional Path" data-section>
-      <h2 data-i18n="traj_title">Professional Path</h2>
+    <!-- PROFESSIONAL PATH -->
+    <div class="section split" id="path" data-section>
+      <h2 data-i18n="path_title">Professional Path</h2>
 
       <div class="grid">
         <div class="card">
-          <p class="kicker" data-i18n="traj_role_1_k">Current</p>
-          <p class="title" data-i18n="traj_role_1_t">AGCO Parts — Global Parts Demand & Supply Planning Optimization (Specialist)</p>
-          <p class="meta" data-i18n="traj_role_1_m">Global inventory and forecasting strategy · segmentation & scenario analysis · analytics-driven planning (SQL/Tableau)</p>
+          <p class="kicker" data-i18n="path_role_1_k">Current</p>
+          <p class="title" data-i18n="path_role_1_t">AGCO Parts — Global Parts Demand & Supply Planning Optimization (Specialist)</p>
+          <p class="meta" data-i18n="path_role_1_m">Global inventory and forecasting strategy · segmentation & scenario analysis · analytics-driven planning (SQL/Tableau)</p>
         </div>
 
         <div class="card">
-          <p class="kicker" data-i18n="traj_role_2_k">Previous</p>
-          <p class="title" data-i18n="traj_role_2_t">AXIA AGRO (Patria Investments) — Demand & Supply Planning Specialist</p>
-          <p class="meta" data-i18n="traj_role_2_m">E2E planning & logistics strategy · S&OP implementation · network redesign</p>
+          <p class="kicker" data-i18n="path_role_2_k">Previous</p>
+          <p class="title" data-i18n="path_role_2_t">AXIA AGRO (Patria Investments) — Demand & Supply Planning Specialist</p>
+          <p class="meta" data-i18n="path_role_2_m">E2E planning & logistics strategy · S&OP implementation · network redesign</p>
         </div>
 
         <div class="card">
-          <p class="kicker" data-i18n="traj_role_3_k">Leadership</p>
-          <p class="title" data-i18n="traj_role_3_t">Adubfértil — Manager of Operational Planning / Planning & Demand Coordinator</p>
-          <p class="meta" data-i18n="traj_role_3_m">S&OP cycles, scenario planning, procurement & logistics strategy · KPI improvement and cost optimization</p>
+          <p class="kicker" data-i18n="path_role_3_k">Leadership</p>
+          <p class="title" data-i18n="path_role_3_t">Adubfértil — Manager of Operational Planning / Planning & Demand Coordinator</p>
+          <p class="meta" data-i18n="path_role_3_m">S&OP cycles, scenario planning, procurement & logistics strategy · KPI improvement and cost optimization</p>
         </div>
 
         <div class="card">
-          <p class="kicker" data-i18n="traj_edu_k">Education & credentials</p>
-          <p class="title" data-i18n="traj_edu_t">UFABC (Production Engineering; Science & Technology) · MITx MicroMasters · ASCM/APICS CSCP (Nov 30, 2025)</p>
-          <p class="meta" data-i18n="traj_edu_m">Advanced analytics (SQL/Tableau/Power BI) · ERP (SAP/TOTVS) · Planning systems (Orbit/Servigistics)</p>
+          <p class="kicker" data-i18n="path_edu_k">Education & credentials</p>
+          <p class="title" data-i18n="path_edu_t">UFABC · MITx MicroMasters · ASCM/APICS CSCP (Nov 30, 2025)</p>
+          <p class="meta" data-i18n="path_edu_m">Advanced analytics (SQL/Tableau/Power BI) · ERP (SAP/TOTVS) · Planning systems (Orbit/Servigistics)</p>
         </div>
       </div>
-
     </div>
 
     <!-- FOUNDATION -->
@@ -481,9 +472,7 @@
         <li data-i18n="f_4">Deep understanding of risk, variability, and value creation</li>
       </ul>
 
-      <p data-i18n="foundation_close">
-        Analytical yet intuitive. Strategic yet operational.
-      </p>
+      <p data-i18n="foundation_close">Analytical yet intuitive. Strategic yet operational.</p>
     </div>
 
     <!-- VALUE + ARETHUSA -->
@@ -491,7 +480,7 @@
       <h2 data-i18n="value_title">The Philosophy of Value</h2>
 
       <p data-i18n="value_p1">
-        Parallel to his corporate Professional Path, Evandro cultivated an appreciation for timeless assets — businesses,
+        Parallel to his corporate trajectory, Evandro cultivated an appreciation for timeless assets — businesses,
         investments, and luxury products that retain meaning across time.
       </p>
 
@@ -509,7 +498,7 @@
       <p data-i18n="value_arethusa">
         In the luxury sector, he serves as <strong>Commercial Director</strong> at
         <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">@arethusajoias</a>
-        <span class="pill" data-i18n="value_pill">Fine Jewelry</span>,
+        <span class="pill">Fine Jewelry</span>,
         applying the same discipline of positioning, execution, and long-term value creation to a refined brand context.
       </p>
     </div>
@@ -544,25 +533,18 @@
   </div>
 
 <script>
-  // Theme (persist)
   const themeBtn = document.getElementById("themeBtn");
   const langBtn = document.getElementById("langBtn");
   const nav = document.getElementById("nav");
 
+  // Theme (persist)
   function setTheme(theme){
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
     themeBtn.textContent = (theme === "light") ? "Dark" : "Light";
   }
-
   const savedTheme = localStorage.getItem("theme");
-  if(savedTheme){
-    setTheme(savedTheme);
-  } else {
-    // default: dark (keep your current aesthetic)
-    setTheme("dark");
-  }
-
+  setTheme(savedTheme || "dark");
   themeBtn.addEventListener("click", () => {
     const current = document.documentElement.getAttribute("data-theme") || "dark";
     setTheme(current === "light" ? "dark" : "light");
@@ -571,9 +553,8 @@
   // Language toggle (EN/PT)
   const dict = {
     en: {
-      nav_sub:"Strategy",
       nav_about:"About",
-      nav_Professional Path:"Professional Path",
+      nav_path:"Professional Path",
       nav_foundation:"Foundation",
       nav_value:"Philosophy",
       nav_contact:"Contact",
@@ -589,20 +570,19 @@
       intro_7:"It is about clarity.",
       intro_8:"It is about making the difficult appear effortless.",
 
-      traj_title:"Professional Professional Path (summary)",
-      traj_role_1_k:"Current",
-      traj_role_1_t:"AGCO Parts — Global Parts Demand & Supply Planning Optimization (Specialist)",
-      traj_role_1_m:"Global inventory and forecasting strategy · segmentation & scenario analysis · analytics-driven planning (SQL/Tableau)",
-      traj_role_2_k:"Previous",
-      traj_role_2_t:"AXIA AGRO (Patria Investments) — Demand & Supply Planning Specialist",
-      traj_role_2_m:"E2E planning & logistics strategy · S&OP implementation · network redesign",
-      traj_role_3_k:"Leadership",
-      traj_role_3_t:"Adubfértil — Manager of Operational Planning / Planning & Demand Coordinator",
-      traj_role_3_m:"S&OP cycles, scenario planning, procurement & logistics strategy · KPI improvement and cost optimization",
-      traj_edu_k:"Education & credentials",
-      traj_edu_t:"UFABC (Production Engineering; Science & Technology) · MITx MicroMasters · ASCM/APICS CSCP (Nov 30, 2025)",
-      traj_edu_m:"Advanced analytics (SQL/Tableau/Power BI) · ERP (SAP/TOTVS) · Planning systems (Orbit/Servigistics)",
-      traj_src_note:"(Details summarized from the CV.)",
+      path_title:"Professional Path",
+      path_role_1_k:"Current",
+      path_role_1_t:"AGCO Parts — Global Parts Demand & Supply Planning Optimization (Specialist)",
+      path_role_1_m:"Global inventory and forecasting strategy · segmentation & scenario analysis · analytics-driven planning (SQL/Tableau)",
+      path_role_2_k:"Previous",
+      path_role_2_t:"AXIA AGRO (Patria Investments) — Demand & Supply Planning Specialist",
+      path_role_2_m:"E2E planning & logistics strategy · S&OP implementation · network redesign",
+      path_role_3_k:"Leadership",
+      path_role_3_t:"Adubfértil — Manager of Operational Planning / Planning & Demand Coordinator",
+      path_role_3_m:"S&OP cycles, scenario planning, procurement & logistics strategy · KPI improvement and cost optimization",
+      path_edu_k:"Education & credentials",
+      path_edu_t:"UFABC · MITx MicroMasters · ASCM/APICS CSCP (Nov 30, 2025)",
+      path_edu_m:"Advanced analytics (SQL/Tableau/Power BI) · ERP (SAP/TOTVS) · Planning systems (Orbit/Servigistics)",
 
       foundation_title:"The Strategic Foundation",
       foundation_intro:"Throughout his journey in global planning leadership roles, Evandro developed:",
@@ -613,12 +593,11 @@
       foundation_close:"Analytical yet intuitive. Strategic yet operational.",
 
       value_title:"The Philosophy of Value",
-      value_p1:"Parallel to his corporate Professional Path, Evandro cultivated an appreciation for timeless assets — businesses, investments, and luxury products that retain meaning across time.",
+      value_p1:"Parallel to his corporate trajectory, Evandro cultivated an appreciation for timeless assets — businesses, investments, and luxury products that retain meaning across time.",
       value_p2:"This philosophy led to the creation of a refined brand vision: one that blends structure with elegance, logic with emotion, strategy with aesthetics.",
       value_lead:"For him, luxury is not excess.",
       value_quote:"Luxury is precision.<br />Luxury is intentionality.<br />Luxury is permanence.",
       value_arethusa:'In the luxury sector, he serves as <strong>Commercial Director</strong> at <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">@arethusajoias</a> <span class="pill">Fine Jewelry</span>, applying the same discipline of positioning, execution, and long-term value creation to a refined brand context.',
-      value_pill:"Fine Jewelry",
 
       contact_title:"Contact",
       contact_loc:"São Paulo · Global Scope",
@@ -629,9 +608,8 @@
     },
 
     pt: {
-      nav_sub:"Estratégia",
       nav_about:"Sobre",
-      nav_Professional Path:"Trajetória",
+      nav_path:"Caminho Profissional",
       nav_foundation:"Base",
       nav_value:"Filosofia",
       nav_contact:"Contato",
@@ -647,20 +625,19 @@
       intro_7:"É sobre clareza.",
       intro_8:"É tornar o difícil naturalmente executável.",
 
-      traj_title:"Trajetória profissional (resumo)",
-      traj_role_1_k:"Atual",
-      traj_role_1_t:"AGCO Parts — Otimização Global de Planejamento de Demanda & Supply (Especialista)",
-      traj_role_1_m:"Estratégia global de estoque e forecast · segmentação e cenários · planejamento orientado por analytics (SQL/Tableau)",
-      traj_role_2_k:"Anterior",
-      traj_role_2_t:"AXIA AGRO (Patria Investments) — Especialista de Planejamento de Demanda & Supply",
-      traj_role_2_m:"Planejamento E2E e estratégia logística · implantação de S&OP · redesenho de rede",
-      traj_role_3_k:"Liderança",
-      traj_role_3_t:"Adubfértil — Gerente de Planejamento Operacional / Coord. de Planejamento e Demanda",
-      traj_role_3_m:"Ciclos de S&OP, cenários, compras e logística · melhoria de KPIs e otimização de custos",
-      traj_edu_k:"Formação & credenciais",
-      traj_edu_t:"UFABC (Eng. Produção; Ciência & Tecnologia) · MITx MicroMasters · ASCM/APICS CSCP (30 nov 2025)",
-      traj_edu_m:"Analytics (SQL/Tableau/Power BI) · ERP (SAP/TOTVS) · Sistemas de planejamento (Orbit/Servigistics)",
-      traj_src_note:"(Resumo baseado no currículo.)",
+      path_title:"Caminho Profissional",
+      path_role_1_k:"Atual",
+      path_role_1_t:"AGCO Parts — Otimização Global de Planejamento de Demanda & Supply (Especialista)",
+      path_role_1_m:"Estratégia global de estoque e forecast · segmentação e cenários · planejamento orientado por analytics (SQL/Tableau)",
+      path_role_2_k:"Anterior",
+      path_role_2_t:"AXIA AGRO (Patria Investments) — Especialista de Planejamento de Demanda & Supply",
+      path_role_2_m:"Planejamento E2E e estratégia logística · implantação de S&OP · redesenho de rede",
+      path_role_3_k:"Liderança",
+      path_role_3_t:"Adubfértil — Gerente de Planejamento Operacional / Coord. de Planejamento e Demanda",
+      path_role_3_m:"Ciclos de S&OP, cenários, compras e logística · melhoria de KPIs e otimização de custos",
+      path_edu_k:"Formação & credenciais",
+      path_edu_t:"UFABC · MITx MicroMasters · ASCM/APICS CSCP (30 nov 2025)",
+      path_edu_m:"Analytics (SQL/Tableau/Power BI) · ERP (SAP/TOTVS) · Sistemas de planejamento (Orbit/Servigistics)",
 
       foundation_title:"A Base Estratégica",
       foundation_intro:"Ao longo da atuação em planejamento global, desenvolveu:",
@@ -676,7 +653,6 @@
       value_lead:"Para ele, luxo não é excesso.",
       value_quote:"Luxo é precisão.<br />Luxo é intencionalidade.<br />Luxo é permanência.",
       value_arethusa:'No setor de luxo, atua como <strong>Diretor Comercial</strong> da <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">@arethusajoias</a> <span class="pill">Joalheria</span>, aplicando disciplina de posicionamento, execução e criação de valor de longo prazo.',
-      value_pill:"Joalheria",
 
       contact_title:"Contato",
       contact_loc:"São Paulo · Global Scope",
@@ -691,13 +667,11 @@
     localStorage.setItem("lang", lang);
     document.documentElement.lang = lang;
 
-    // Update plain-text nodes
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.getAttribute("data-i18n");
       const val = dict[lang][key];
       if(!val) return;
 
-      // allow HTML in specific blocks (like the arethusa paragraph)
       if(key === "value_arethusa" || key === "value_quote"){
         el.innerHTML = val;
       } else {
@@ -705,26 +679,25 @@
       }
     });
 
-    // button label
     langBtn.textContent = (lang === "en") ? "PT" : "EN";
   }
 
-  const savedLang = localStorage.getItem("lang") || "en";
-  setLang(savedLang);
+  setLang(localStorage.getItem("lang") || "en");
 
   langBtn.addEventListener("click", () => {
     const current = localStorage.getItem("lang") || "en";
     setLang(current === "en" ? "pt" : "en");
   });
 
-  // Navbar shrink + active section
+  // Navbar shrink
   window.addEventListener("scroll", () => {
     if(window.scrollY > 18) nav.classList.add("shrink");
     else nav.classList.remove("shrink");
   });
 
+  // Active link by section
   const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
-  const sections = ["about","Professional Path","foundation","value","contact"].map(id => document.getElementById(id));
+  const sections = ["about","path","foundation","value","contact"].map(id => document.getElementById(id));
 
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -733,7 +706,7 @@
         navLinks.forEach(a => a.classList.toggle("active", a.dataset.nav === id));
       }
     });
-  }, { root: null, threshold: 0.35 });
+  }, { threshold: 0.35 });
 
   sections.forEach(s => s && io.observe(s));
 
