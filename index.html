@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Evandro Camargo</title>
+<meta name="description" content="Strategic profile of Evandro Camargo: global supply chain planning, analytics, and long-term value creation." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +38,7 @@
 
   *{ box-sizing:border-box; }
   html{ scroll-behavior:smooth; }
+  html, body{ min-height:100%; }
 
   body{
     margin:0;
@@ -48,6 +50,8 @@
       radial-gradient(1200px 900px at 20% 12%, rgba(255,255,255,.06), transparent 55%),
       radial-gradient(900px 800px at 86% 28%, rgba(255,255,255,.05), transparent 55%),
       linear-gradient(180deg, var(--bg), var(--bg2));
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
 
   /* subtle texture */
@@ -127,6 +131,14 @@
   .nav-links a:hover{ color:var(--accent); }
   .nav-links a.active{ color:var(--accent); }
 
+  .nav-links a:focus-visible,
+  .btn:focus-visible,
+  a:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 8px;
+  }
+
   .nav-links a:after{
     content:"";
     position:absolute;
@@ -188,12 +200,14 @@
     font-weight:600;
     letter-spacing:.2px;
     margin:0 0 12px 0;
+    text-wrap:balance;
   }
   .tagline{
     font-size:18px;
     color:var(--muted);
     margin:0;
     max-width:620px;
+    text-wrap:pretty;
   }
   .hero img{
     width:380px;
@@ -228,6 +242,7 @@
     margin:0 0 18px 0;
     color:var(--muted);
     font-size:16.5px;
+    text-wrap:pretty;
   }
 
   .lead{
@@ -252,6 +267,7 @@
     font-size:18px;
     background: rgba(255,255,255,.02);
     border-radius:10px;
+    font-style:italic;
   }
   html[data-theme="light"] .pullquote{
     border-left:2px solid rgba(0,0,0,.22);
@@ -352,6 +368,15 @@
     border-top:1px solid var(--line);
     color:#777;
     font-size:13px;
+    letter-spacing:.04em;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{
+      animation:none !important;
+      transition:none !important;
+      scroll-behavior:auto !important;
+    }
   }
 
   @media (max-width: 920px){
@@ -545,7 +570,10 @@
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
     // button shows the next action
-    themeBtn.textContent = (theme === "light") ? "Dark" : "Light";
+    const nextTheme = (theme === "light") ? "Dark" : "Light";
+    themeBtn.textContent = nextTheme;
+    themeBtn.setAttribute("aria-label", `Switch to ${nextTheme} theme`);
+    themeBtn.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
   }
 
   setTheme(localStorage.getItem("theme") || "dark");
@@ -566,14 +594,14 @@
       tagline:"Strategic Mind. Refined Execution. Enduring Value.",
 
       intro_1:"Some careers are built on opportunity. Others are built on discipline.",
-      intro_2:"Evandro Camargo belongs to the second category.",
-      intro_3:"With over a decade of experience navigating complex global supply chains, he developed a reputation for combining analytical precision with strategic foresight. Operating in multinational environments, leading cross-regional demand planning initiatives, and driving optimization programs across continents, he learned one fundamental truth:",
+      intro_2:"Evandro Camargo belongs firmly to the second category.",
+      intro_3:"With over a decade of experience navigating complex global supply chains, he has built a reputation for combining analytical precision with strategic foresight. Working in multinational environments, leading cross-regional demand planning initiatives, and driving optimization programs across continents, he embraced one fundamental truth:",
       quote:"Excellence is not accidental. It is engineered.",
       intro_4:"His work spans advanced forecasting methodologies, inventory strategy, data science applications, executive-level reporting, and digital transformation. Leveraging SQL, Python, Tableau, and advanced enterprise planning systems, Evandro transforms structured data into disciplined decision frameworks.",
-      intro_5:"Certified APICS CSCP, he operates within globally benchmarked supply chain standards, combining analytical rigor with execution discipline to generate measurable performance outcomes.",
+      intro_5:"As an APICS CSCP-certified professional, he operates within globally benchmarked supply chain standards, combining analytical rigor with execution discipline to deliver measurable outcomes.",
       intro_6:"But sophistication, for him, is not about complexity.",
       intro_7:"It is about clarity.",
-      intro_8:"It is about making the difficult appear effortless.",
+      intro_8:"It is about making the complex feel natural.",
 
       path_title:"Professional Path",
       path_role_1_k:"Current",
@@ -618,17 +646,17 @@
       nav_foundation:"Base",
       nav_value:"Filosofia",
       nav_contact:"Contato",
-      tagline:"Mente estratégica. Execução refinada. Valor duradouro.",
+      tagline:"Mente Estratégica. Execução Refinada. Valor Duradouro.",
 
       intro_1:"Algumas carreiras são construídas por oportunidade. Outras, por disciplina.",
       intro_2:"Evandro Camargo pertence à segunda categoria.",
-      intro_3:"Com mais de uma década atuando em cadeias globais complexas, construiu reputação unindo precisão analítica e visão estratégica. Em ambientes multinacionais, liderando iniciativas cross-regionais e programas de otimização, consolidou uma convicção:",
+      intro_3:"Com mais de uma década atuando em cadeias globais complexas, construiu reputação ao unir precisão analítica e visão estratégica. Em ambientes multinacionais, liderando iniciativas entre regiões e programas de otimização, consolidou uma convicção:",
       quote:"Excelência não é acidental. É projetada.",
-      intro_4:"Seu trabalho abrange metodologias avançadas de forecast, arquitetura de estoque, aplicações de dados, reporte executivo e transformação digital. Com SQL, Python, Tableau e sistemas avançados de planejamento, transforma dados estruturados em frameworks de decisão com disciplina e consistência.",
+      intro_4:"Seu trabalho abrange metodologias avançadas de forecast, estratégia de estoque, aplicações de dados, reporte executivo e transformação digital. Com SQL, Python, Tableau e sistemas avançados de planejamento, transforma dados estruturados em decisões com disciplina e consistência.",
       intro_5:"Certificado APICS CSCP, atua alinhado a padrões globais de supply chain, combinando rigor analítico e disciplina de execução para gerar performance mensurável.",
       intro_6:"Para ele, sofisticação não é sobre complexidade.",
       intro_7:"É sobre clareza.",
-      intro_8:"É tornar o difícil naturalmente executável.",
+      intro_8:"É fazer o complexo parecer natural.",
 
       path_title:"Caminho Profissional",
       path_role_1_k:"Atual",
@@ -685,7 +713,10 @@
       }
     });
 
-    langBtn.textContent = (lang === "en") ? "PT" : "EN";
+    const nextLang = (lang === "en") ? "PT" : "EN";
+    langBtn.textContent = nextLang;
+    langBtn.setAttribute("aria-label", `Switch language to ${nextLang}`);
+    langBtn.setAttribute("aria-pressed", lang === "pt" ? "true" : "false");
   }
 
   setLang(localStorage.getItem("lang") || "en");
