@@ -19,7 +19,7 @@
     --line:rgba(255,255,255,.09);
     --card:rgba(255,255,255,.035);
     --shadow: 0 28px 70px rgba(0,0,0,.55);
-    --accent: rgba(255,255,255,.85);
+    --accent: rgba(255,255,255,.90);
   }
 
   /* Light theme */
@@ -32,7 +32,7 @@
     --line:rgba(0,0,0,.10);
     --card:rgba(0,0,0,.03);
     --shadow: 0 20px 55px rgba(0,0,0,.15);
-    --accent: rgba(0,0,0,.85);
+    --accent: rgba(0,0,0,.90);
   }
 
   *{ box-sizing:border-box; }
@@ -56,7 +56,7 @@
     position:fixed;
     inset:0;
     pointer-events:none;
-    opacity:.09;
+    opacity:.085;
     mix-blend-mode: overlay;
     background:
       radial-gradient(900px 700px at 30% 40%, rgba(255,255,255,.14), transparent 60%),
@@ -74,7 +74,7 @@
     background: rgba(15,15,15,.55);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    transition: padding .18s ease, background .18s ease;
+    transition: transform .18s ease, background .18s ease;
   }
   [data-theme="light"] .nav{
     background: rgba(246,244,241,.65);
@@ -97,7 +97,7 @@
     display:flex;
     align-items:baseline;
     gap:14px;
-    min-width: 220px;
+    min-width: 240px;
   }
   .brand .name{
     font-family: "Cormorant Garamond", serif;
@@ -127,6 +127,7 @@
   }
   .nav-links a:hover{ color:var(--accent); }
   .nav-links a.active{ color:var(--accent); }
+
   .nav-links a:after{
     content:"";
     position:absolute;
@@ -149,7 +150,7 @@
     display:flex;
     align-items:center;
     gap:10px;
-    min-width: 220px;
+    min-width: 240px;
     justify-content:flex-end;
   }
 
@@ -398,7 +399,7 @@
         <h1>Evandro Camargo</h1>
         <p class="tagline" data-i18n="tagline">Strategic Mind. Refined Execution. Enduring Value.</p>
       </div>
-      <img src="/profile.png?v=41" alt="Evandro Camargo" />
+      <img src="/profile.png?v=55" alt="Evandro Camargo" />
     </div>
 
     <!-- INTRO -->
@@ -435,26 +436,31 @@
       <div class="grid">
         <div class="card">
           <p class="kicker" data-i18n="path_role_1_k">Current</p>
-          <p class="title" data-i18n="path_role_1_t">AGCO Parts Global Parts Demand & Supply Planning Optimization (Specialist)</p>
-          <p class="meta" data-i18n="path_role_1_m">Global inventory and forecasting strategy · segmentation & scenario analysis · analytics-driven planning (SQL/Tableau)</p>
+          <p class="title" data-i18n="path_role_1_t">AGCO Parts — Global Parts Demand & Supply Optimization Specialist</p>
+          <p class="meta" data-i18n="path_role_1_m">Global inventory strategy · Forecasting architecture · Analytics-driven planning</p>
         </div>
 
         <div class="card">
           <p class="kicker" data-i18n="path_role_2_k">Previous</p>
-          <p class="title" data-i18n="path_role_2_t">AXIA AGRO (Patria Investments)  Demand & Supply Planning Specialist</p>
-          <p class="meta" data-i18n="path_role_2_m">E2E planning & logistics strategy · S&OP implementation · network redesign</p>
+          <p class="title" data-i18n="path_role_2_t">AXIA AGRO (Patria Investments) — Demand & Supply Planning Specialist</p>
+          <p class="meta" data-i18n="path_role_2_m">E2E planning · S&OP implementation · Network strategy</p>
         </div>
 
         <div class="card">
           <p class="kicker" data-i18n="path_role_3_k">Leadership</p>
-          <p class="title" data-i18n="path_role_3_t">Adufértil  Manager of Operational Planning / Planning & Demand Coordinator</p>
-          <p class="meta" data-i18n="path_role_3_m">S&OP cycles, scenario planning, procurement & logistics strategy · KPI improvement and cost optimization</p>
+          <p class="title" data-i18n="path_role_3_t">Adufértil— Manager of Operational Planning / Planning & Demand Coordinator</p>
+          <p class="meta" data-i18n="path_role_3_m">S&OP cycles · Procurement & logistics strategy · KPI improvement</p>
         </div>
 
         <div class="card">
           <p class="kicker" data-i18n="path_edu_k">Education & credentials</p>
-          <p class="title" data-i18n="path_edu_t">UFABC · MITx MicroMasters · ASCM/APICS CSCP (Nov 30, 2025)</p>
-          <p class="meta" data-i18n="path_edu_m">Advanced analytics (SQL/Tableau/Power BI) · ERP (SAP/TOTVS) · Planning systems (Orbit/Servigistics)</p>
+          <p class="title" data-i18n="path_edu_t">Academic Degrees & Certifications</p>
+          <p class="meta" data-i18n="path_edu_m">
+            • B.Sc. in Production Engineering — Federal University of ABC (UFABC)<br>
+            • B.Sc. in Science & Technology — Federal University of ABC (UFABC)<br>
+            • MITx MicroMasters — Supply Chain Management<br>
+            • ASCM/APICS CSCP — Certified Supply Chain Professional (Nov 30, 2025)
+          </p>
         </div>
       </div>
     </div>
@@ -572,17 +578,17 @@
 
       path_title:"Professional Path",
       path_role_1_k:"Current",
-      path_role_1_t:"AGCO Parts — Global Parts Demand & Supply Planning Optimization (Specialist)",
-      path_role_1_m:"Global inventory and forecasting strategy · segmentation & scenario analysis · analytics-driven planning (SQL/Tableau)",
+      path_role_1_t:"AGCO Parts — Global Parts Demand & Supply Optimization Specialist",
+      path_role_1_m:"Global inventory strategy · Forecasting architecture · Analytics-driven planning",
       path_role_2_k:"Previous",
       path_role_2_t:"AXIA AGRO (Patria Investments) — Demand & Supply Planning Specialist",
-      path_role_2_m:"E2E planning & logistics strategy · S&OP implementation · network redesign",
+      path_role_2_m:"E2E planning · S&OP implementation · Network strategy",
       path_role_3_k:"Leadership",
       path_role_3_t:"Adufértil— Manager of Operational Planning / Planning & Demand Coordinator",
-      path_role_3_m:"S&OP cycles, scenario planning, procurement & logistics strategy · KPI improvement and cost optimization",
+      path_role_3_m:"S&OP cycles · Procurement & logistics strategy · KPI improvement",
       path_edu_k:"Education & credentials",
-      path_edu_t:"UFABC · MITx MicroMasters · ASCM/APICS CSCP (Nov 30, 2025)",
-      path_edu_m:"Advanced analytics (SQL/Tableau/Power BI) · ERP (SAP/TOTVS) · Planning systems (Orbit/Servigistics)",
+      path_edu_t:"Academic Degrees & Certifications",
+      path_edu_m:"• B.Sc. in Production Engineering — Federal University of ABC (UFABC)<br>• B.Sc. in Science & Technology — Federal University of ABC (UFABC)<br>• MITx MicroMasters — Supply Chain Management<br>• ASCM/APICS CSCP — Certified Supply Chain Professional (Nov 30, 2025)",
 
       foundation_title:"The Strategic Foundation",
       foundation_intro:"Throughout his journey in global planning leadership roles, Evandro developed:",
@@ -627,17 +633,17 @@
 
       path_title:"Caminho Profissional",
       path_role_1_k:"Atual",
-      path_role_1_t:"AGCO Parts — Otimização Global de Planejamento de Demanda & Supply (Especialista)",
-      path_role_1_m:"Estratégia global de estoque e forecast · segmentação e cenários · planejamento orientado por analytics (SQL/Tableau)",
+      path_role_1_t:"AGCO Parts — Global Parts Demand & Supply Optimization Specialist",
+      path_role_1_m:"Estratégia global de estoque · Arquitetura de forecast · Planejamento orientado por analytics",
       path_role_2_k:"Anterior",
       path_role_2_t:"AXIA AGRO (Patria Investments) — Especialista de Planejamento de Demanda & Supply",
-      path_role_2_m:"Planejamento E2E e estratégia logística · implantação de S&OP · redesenho de rede",
+      path_role_2_m:"Planejamento E2E · Implantação de S&OP · Estratégia de rede",
       path_role_3_k:"Liderança",
       path_role_3_t:"Adufértil— Gerente de Planejamento Operacional / Coord. de Planejamento e Demanda",
-      path_role_3_m:"Ciclos de S&OP, cenários, compras e logística · melhoria de KPIs e otimização de custos",
+      path_role_3_m:"Ciclos de S&OP · Estratégia de compras e logística · Melhoria de KPIs",
       path_edu_k:"Formação & credenciais",
-      path_edu_t:"UFABC · MITx MicroMasters · ASCM/APICS CSCP (30 nov 2025)",
-      path_edu_m:"Analytics (SQL/Tableau/Power BI) · ERP (SAP/TOTVS) · Sistemas de planejamento (Orbit/Servigistics)",
+      path_edu_t:"Formação acadêmica & certificações",
+      path_edu_m:"• Bacharel em Engenharia de Produção — Universidade Federal do ABC (UFABC)<br>• Bacharel em Ciência e Tecnologia — Universidade Federal do ABC (UFABC)<br>• MITx MicroMasters — Supply Chain Management<br>• ASCM/APICS CSCP — Certified Supply Chain Professional (30 nov 2025)",
 
       foundation_title:"A Base Estratégica",
       foundation_intro:"Ao longo da atuação em planejamento global, desenvolveu:",
@@ -672,7 +678,8 @@
       const val = dict[lang][key];
       if(!val) return;
 
-      if(key === "value_arethusa" || key === "value_quote"){
+      // allow HTML in specific blocks
+      if(key === "value_arethusa" || key === "value_quote" || key === "path_edu_m"){
         el.innerHTML = val;
       } else {
         el.textContent = val;
@@ -718,6 +725,12 @@
   }, { threshold: 0.12 });
 
   document.querySelectorAll("[data-section], .section").forEach(el => reveal.observe(el));
+
+  // Theme button
+  themeBtn.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") || "dark";
+    setTheme(current === "light" ? "dark" : "light");
+  });
 </script>
 </body>
 </html>
