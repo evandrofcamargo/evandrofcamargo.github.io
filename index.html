@@ -6,279 +6,748 @@
 <title>Evandro Camargo</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --bg:#0f0f0f;
-  --text:#f2f2f2;
-  --muted:#bfbfbf;
-  --line:rgba(255,255,255,.08);
-  --card:rgba(255,255,255,.03);
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  font-family:Inter, sans-serif;
-  background:linear-gradient(180deg,#0f0f0f,#0b0b0b);
-  color:var(--text);
-  line-height:1.9;
-}
-
-/* NAVIGATION */
-.nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  backdrop-filter: blur(10px);
-  background:rgba(15,15,15,.75);
-  border-bottom:1px solid var(--line);
-  z-index:1000;
-}
-
-.nav-inner{
-  max-width:1100px;
-  margin:auto;
-  padding:16px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.nav-logo{
-  font-family:"Cormorant Garamond", serif;
-  font-size:20px;
-  letter-spacing:.3px;
-}
-
-.nav a{
-  color:var(--muted);
-  text-decoration:none;
-  margin-left:28px;
-  font-size:14px;
-  letter-spacing:.5px;
-  text-transform:uppercase;
-}
-
-.nav a:hover{
-  color:var(--text);
-}
-
-/* CONTAINER */
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:140px 40px 100px 40px;
-}
-
-.section{
-  margin-top:100px;
-  max-width:900px;
-}
-
-.section h2{
-  font-size:22px;
-  font-weight:500;
-  margin-bottom:20px;
-}
-
-.section p{
-  color:var(--muted);
-  margin-bottom:18px;
-  font-size:16.5px;
-}
-
-.hero{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:60px;
-  padding-bottom:60px;
-  border-bottom:1px solid var(--line);
-}
-
-.hero h1{
-  font-family:"Cormorant Garamond", serif;
-  font-size:54px;
-  margin:0 0 12px 0;
-}
-
-.tagline{
-  color:var(--muted);
-  font-size:18px;
-}
-
-.hero img{
-  width:380px;
-  border-radius:14px;
-  box-shadow:0 30px 80px rgba(0,0,0,.6);
-  border:1px solid rgba(255,255,255,.1);
-}
-
-.pullquote{
-  margin:28px 0;
-  padding-left:20px;
-  border-left:2px solid rgba(255,255,255,.25);
-  font-size:18px;
-  color:var(--text);
-}
-
-.split{
-  padding:40px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:var(--card);
-}
-
-.bullets div{
-  margin:8px 0;
-}
-
-.contact div{
-  margin:10px 0;
-}
-
-a{
-  color:var(--text);
-  text-decoration:none;
-}
-
-a:hover{
-  opacity:.7;
-}
-
-.footer{
-  margin-top:120px;
-  padding-top:30px;
-  border-top:1px solid var(--line);
-  font-size:13px;
-  color:#777;
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero{
-    flex-direction:column;
-    text-align:center;
+  :root{
+    --bg:#0f0f0f;
+    --bg2:#0b0b0b;
+    --text:#f2f2f2;
+    --muted:#c8c8c8;
+    --soft:#a9a9a9;
+    --line:rgba(255,255,255,.09);
+    --card:rgba(255,255,255,.035);
+    --shadow: 0 28px 70px rgba(0,0,0,.55);
+    --accent: rgba(255,255,255,.85);
   }
-  .hero img{
-    width:260px;
+
+  /* Light theme */
+  [data-theme="light"]{
+    --bg:#f6f4f1;
+    --bg2:#f1eee9;
+    --text:#121212;
+    --muted:#2c2c2c;
+    --soft:#4b4b4b;
+    --line:rgba(0,0,0,.10);
+    --card:rgba(0,0,0,.03);
+    --shadow: 0 20px 55px rgba(0,0,0,.15);
+    --accent: rgba(0,0,0,.85);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color:var(--text);
+    line-height:1.9;
+    letter-spacing:.1px;
+    background:
+      radial-gradient(1200px 900px at 20% 12%, rgba(255,255,255,.06), transparent 55%),
+      radial-gradient(900px 800px at 86% 28%, rgba(255,255,255,.05), transparent 55%),
+      linear-gradient(180deg, var(--bg), var(--bg2));
+  }
+
+  /* Subtle “marble / texture” */
+  body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.09;
+    mix-blend-mode: overlay;
+    background:
+      radial-gradient(900px 700px at 30% 40%, rgba(255,255,255,.14), transparent 60%),
+      radial-gradient(800px 700px at 70% 55%, rgba(255,255,255,.10), transparent 65%),
+      linear-gradient(120deg, rgba(255,255,255,.05), transparent 35%, rgba(255,255,255,.04));
+  }
+
+  /* NAV */
+  .nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    border-bottom:1px solid var(--line);
+    background: rgba(15,15,15,.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: padding .18s ease, background .18s ease;
+  }
+  [data-theme="light"] .nav{
+    background: rgba(246,244,241,.65);
   }
   .nav-inner{
-    flex-direction:column;
-    gap:12px;
+    max-width:1100px;
+    margin:auto;
+    padding:18px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    transition: padding .18s ease;
   }
-}
+  .nav.shrink .nav-inner{
+    padding:12px 40px;
+  }
+
+  .brand{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    min-width: 220px;
+  }
+  .brand .name{
+    font-family: "Cormorant Garamond", serif;
+    font-weight:600;
+    letter-spacing:.2px;
+    font-size:22px;
+    color:var(--accent);
+    white-space:nowrap;
+  }
+  .brand .sub{
+    font-size:12px;
+    letter-spacing:.36em;
+    text-transform:uppercase;
+    color:var(--soft);
+    opacity:.9;
+    white-space:nowrap;
+  }
+
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .nav-links a{
+    color:var(--soft);
+    text-decoration:none;
+    font-size:12px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    position:relative;
+    padding:6px 0;
+    transition: color .15s ease, opacity .15s ease;
+  }
+  .nav-links a:hover{ color:var(--accent); }
+  .nav-links a.active{ color:var(--accent); }
+  .nav-links a:after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-2px;
+    width:100%;
+    height:1px;
+    background: var(--accent);
+    transform: scaleX(.25);
+    transform-origin:left;
+    opacity:.45;
+    transition: transform .18s ease, opacity .18s ease;
+  }
+  .nav-links a.active:after{
+    transform: scaleX(1);
+    opacity:.75;
+  }
+
+  .nav-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-width: 220px;
+    justify-content:flex-end;
+  }
+
+  .btn{
+    border:1px solid var(--line);
+    background: transparent;
+    color:var(--accent);
+    padding:8px 10px;
+    border-radius:999px;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition: transform .12s ease, opacity .12s ease, background .12s ease;
+  }
+  .btn:hover{ opacity:.85; }
+  .btn:active{ transform: translateY(1px); }
+
+  .container{
+    max-width:1100px;
+    margin:auto;
+    padding:140px 40px 96px 40px;
+  }
+
+  .hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:64px;
+    padding-bottom:56px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero h1{
+    font-family: "Cormorant Garamond", serif;
+    font-size:56px;
+    font-weight:600;
+    letter-spacing:.2px;
+    margin:0 0 12px 0;
+  }
+  .tagline{
+    font-size:18px;
+    color:var(--muted);
+    margin:0;
+    max-width:620px;
+  }
+  .hero img{
+    width:380px;
+    border-radius:14px;
+    display:block;
+    box-shadow: var(--shadow);
+    border:1px solid var(--line);
+    outline:1px solid rgba(255,255,255,.04);
+    outline-offset:6px;
+  }
+
+  .section{
+    margin-top:72px;
+    max-width:920px;
+    opacity:0;
+    transform: translateY(10px);
+    transition: opacity .45s ease, transform .45s ease;
+  }
+  .section.in{
+    opacity:1;
+    transform: translateY(0);
+  }
+
+  .section h2{
+    font-size:22px;
+    font-weight:500;
+    margin:0 0 18px 0;
+    letter-spacing:.2px;
+  }
+
+  .section p{
+    margin:0 0 18px 0;
+    color:var(--muted);
+    font-size:16.5px;
+  }
+
+  .lead{
+    color:var(--text);
+    font-size:18px;
+  }
+
+  .split{
+    margin-top:72px;
+    padding:40px 34px;
+    border:1px solid var(--line);
+    border-radius:16px;
+    background: var(--card);
+    backdrop-filter: blur(6px);
+  }
+
+  .pullquote{
+    margin:26px 0 24px 0;
+    padding:18px 20px;
+    border-left:2px solid rgba(255,255,255,.28);
+    color:var(--text);
+    font-size:18px;
+    background: rgba(255,255,255,.02);
+    border-radius:10px;
+  }
+  [data-theme="light"] .pullquote{
+    border-left:2px solid rgba(0,0,0,.22);
+  }
+
+  .bullets{
+    margin:14px 0 0 0;
+    padding:0;
+    list-style:none;
+  }
+  .bullets li{
+    margin:10px 0;
+    color:var(--muted);
+    font-size:16.5px;
+  }
+  .bullets li::before{
+    content:"• ";
+    color:var(--accent);
+    opacity:.9;
+  }
+
+  a{
+    color:var(--accent);
+    text-decoration:none;
+    position:relative;
+  }
+  a:after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-3px;
+    width:100%;
+    height:1px;
+    background: var(--accent);
+    transform: scaleX(.35);
+    transform-origin:left;
+    transition: transform .18s ease, opacity .18s ease;
+    opacity:.55;
+  }
+  a:hover:after{
+    transform: scaleX(1);
+    opacity:.9;
+  }
+
+  .pill{
+    display:inline-block;
+    margin-left:10px;
+    padding:3px 10px;
+    font-size:12px;
+    letter-spacing:.2px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    color: var(--soft);
+    background: rgba(255,255,255,.03);
+    vertical-align:middle;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:18px;
+  }
+  .card{
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 18px;
+    background: rgba(255,255,255,.02);
+  }
+  .card .kicker{
+    font-size:12px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--soft);
+    margin:0 0 8px 0;
+  }
+  .card .title{
+    font-size:16px;
+    color:var(--accent);
+    margin:0 0 6px 0;
+    font-weight:500;
+  }
+  .card .meta{
+    font-size:14px;
+    color:var(--muted);
+    margin:0;
+  }
+
+  .contact{
+    margin-top:14px;
+    color:var(--muted);
+    font-size:16.5px;
+  }
+  .contact .row{ margin:12px 0; }
+
+  .footer{
+    margin-top:110px;
+    padding-top:26px;
+    border-top:1px solid var(--line);
+    color:#777;
+    font-size:13px;
+  }
+
+  @media (max-width: 920px){
+    .nav-inner{ padding:14px 18px; }
+    .nav.shrink .nav-inner{ padding:10px 18px; }
+    .brand{ min-width: unset; }
+    .nav-actions{ min-width: unset; }
+    .hero{ flex-direction:column; text-align:center; }
+    .hero img{ width:280px; }
+    .split{ padding:32px 20px; }
+    .grid{ grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 
 <body>
+  <!-- NAV -->
+  <div class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="name">Evandro Camargo</div>
+        <div class="sub" data-i18n="nav_sub">Strategy</div>
+      </div>
 
-<!-- NAV -->
-<div class="nav">
-  <div class="nav-inner">
-    <div class="nav-logo">Evandro Camargo</div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#foundation">Foundation</a>
-      <a href="#value">Philosophy</a>
-      <a href="#contact">Contact</a>
+      <div class="nav-links" aria-label="Primary">
+        <a href="#about" data-nav="about" class="active" data-i18n="nav_about">About</a>
+        <a href="#trajectory" data-nav="trajectory" data-i18n="nav_trajectory">Trajectory</a>
+        <a href="#foundation" data-nav="foundation" data-i18n="nav_foundation">Foundation</a>
+        <a href="#value" data-nav="value" data-i18n="nav_value">Philosophy</a>
+        <a href="#contact" data-nav="contact" data-i18n="nav_contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="btn" id="langBtn" aria-label="Toggle language">PT</button>
+        <button class="btn" id="themeBtn" aria-label="Toggle theme">Light</button>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container">
+  <div class="container">
 
-<!-- HERO -->
-<div class="hero" id="about">
-  <div>
-    <h1>Evandro Camargo</h1>
-    <p class="tagline">Strategic Mind. Refined Execution. Enduring Value.</p>
-    <p style="color:#888;font-size:14px;margin-top:12px;">São Paulo · Global Scope</p>
-  </div>
-  <img src="/profile.png?v=40" alt="Evandro Camargo">
-</div>
-
-<div class="section">
-  <p>Some careers are built on opportunity. Others are built on discipline.</p>
-  <p>Evandro Camargo belongs to the second category.</p>
-
-  <p>
-  With over a decade of experience navigating complex global supply chains, he developed a reputation for combining analytical precision with strategic foresight.
-  </p>
-
-  <div class="pullquote">Excellence is not accidental. It is engineered.</div>
-
-  <p>
-  Leveraging SQL, Python, Tableau, and advanced enterprise planning systems, Evandro transforms structured data into disciplined decision frameworks.
-  </p>
-
-  <p>
-  Certified APICS CSCP, he operates within globally benchmarked supply chain standards, combining analytical rigor with execution discipline.
-  </p>
-</div>
-
-<div class="section split" id="foundation">
-  <h2>The Strategic Foundation</h2>
-  <div class="bullets">
-    <div>• Disciplined decision-making architecture</div>
-    <div>• Global mindset with local execution sensitivity</div>
-    <div>• Financial acumen rooted in measurable outcomes</div>
-    <div>• Deep understanding of risk and value creation</div>
-  </div>
-</div>
-
-<div class="section split" id="value">
-  <h2>The Philosophy of Value</h2>
-
-  <p>Luxury is not excess.</p>
-
-  <div class="pullquote">
-  Luxury is precision.<br>
-  Luxury is intentionality.<br>
-  Luxury is permanence.
-  </div>
-
-  <p>
-  Commercial Director at 
-  <a href="https://www.instagram.com/arethusajoias/" target="_blank">@arethusajoias</a>,
-  applying structured positioning and long-term value architecture to fine jewelry.
-  </p>
-</div>
-
-<div class="section split" id="contact">
-  <h2>Contact</h2>
-  <div class="contact">
-    <div>São Paulo · Global Scope</div>
-    <div>
-      LinkedIn:
-      <a href="https://www.linkedin.com/in/evandro-ferraz-camargo-efc/" target="_blank">
-      evandro-ferraz-camargo-efc
-      </a>
+    <!-- HERO -->
+    <div class="hero section in" id="about">
+      <div>
+        <h1>Evandro Camargo</h1>
+        <p class="tagline" data-i18n="tagline">Strategic Mind. Refined Execution. Enduring Value.</p>
+      </div>
+      <img src="/profile.png?v=41" alt="Evandro Camargo" />
     </div>
-    <div>
-      Email:
-      <a href="mailto:ferrazcamargo@gmail.com">
-      ferrazcamargo@gmail.com
-      </a>
+
+    <!-- INTRO -->
+    <div class="section" data-section>
+      <p class="lead" data-i18n="intro_1">Some careers are built on opportunity. Others are built on discipline.</p>
+      <p class="lead" data-i18n="intro_2">Evandro Camargo belongs to the second category.</p>
+
+      <p data-i18n="intro_3">
+        With over a decade of experience navigating complex global supply chains, he developed a reputation for combining analytical precision with strategic foresight.
+        Operating in multinational environments, leading cross-regional demand planning initiatives, and driving optimization programs across continents, he learned one fundamental truth:
+      </p>
+
+      <div class="pullquote" data-i18n="quote">Excellence is not accidental. It is engineered.</div>
+
+      <p data-i18n="intro_4">
+        His work spans advanced forecasting methodologies, inventory strategy, data science applications, executive-level reporting, and digital transformation.
+        Leveraging SQL, Python, Tableau, and advanced enterprise planning systems, Evandro transforms structured data into disciplined decision frameworks.
+      </p>
+
+      <p data-i18n="intro_5">
+        Certified APICS CSCP, he operates within globally benchmarked supply chain standards, combining analytical rigor with execution discipline
+        to generate measurable performance outcomes.
+      </p>
+
+      <p data-i18n="intro_6">But sophistication, for him, is not about complexity.</p>
+      <p data-i18n="intro_7">It is about clarity.</p>
+      <p data-i18n="intro_8">It is about making the difficult appear effortless.</p>
     </div>
-    <div>
-      Instagram:
-      <a href="https://www.instagram.com/arethusajoias/" target="_blank">
-      @arethusajoias
-      </a>
-      <span style="opacity:.7;">(Commercial Director)</span>
+
+    <!-- TRAJECTORY -->
+    <div class="section split" id="trajectory" data-section>
+      <h2 data-i18n="traj_title">Professional trajectory (summary)</h2>
+
+      <div class="grid">
+        <div class="card">
+          <p class="kicker" data-i18n="traj_role_1_k">Current</p>
+          <p class="title" data-i18n="traj_role_1_t">AGCO Parts — Global Parts Demand & Supply Planning Optimization (Specialist)</p>
+          <p class="meta" data-i18n="traj_role_1_m">Global inventory and forecasting strategy · segmentation & scenario analysis · analytics-driven planning (SQL/Tableau)</p>
+        </div>
+
+        <div class="card">
+          <p class="kicker" data-i18n="traj_role_2_k">Previous</p>
+          <p class="title" data-i18n="traj_role_2_t">AXIA AGRO (Patria Investments) — Demand & Supply Planning Specialist</p>
+          <p class="meta" data-i18n="traj_role_2_m">E2E planning & logistics strategy · S&OP implementation · network redesign</p>
+        </div>
+
+        <div class="card">
+          <p class="kicker" data-i18n="traj_role_3_k">Leadership</p>
+          <p class="title" data-i18n="traj_role_3_t">Adubfértil — Manager of Operational Planning / Planning & Demand Coordinator</p>
+          <p class="meta" data-i18n="traj_role_3_m">S&OP cycles, scenario planning, procurement & logistics strategy · KPI improvement and cost optimization</p>
+        </div>
+
+        <div class="card">
+          <p class="kicker" data-i18n="traj_edu_k">Education & credentials</p>
+          <p class="title" data-i18n="traj_edu_t">UFABC (Production Engineering; Science & Technology) · MITx MicroMasters · ASCM/APICS CSCP (Nov 30, 2025)</p>
+          <p class="meta" data-i18n="traj_edu_m">Advanced analytics (SQL/Tableau/Power BI) · ERP (SAP/TOTVS) · Planning systems (Orbit/Servigistics)</p>
+        </div>
+      </div>
+
+      <p style="margin-top:18px" data-i18n="traj_src_note">
+        (Details summarized from the CV.)
+      </p>
     </div>
+
+    <!-- FOUNDATION -->
+    <div class="section split" id="foundation" data-section>
+      <h2 data-i18n="foundation_title">The Strategic Foundation</h2>
+
+      <p data-i18n="foundation_intro">Throughout his journey in global planning leadership roles, Evandro developed:</p>
+
+      <ul class="bullets">
+        <li data-i18n="f_1">A disciplined approach to decision-making</li>
+        <li data-i18n="f_2">A global mindset with local execution sensitivity</li>
+        <li data-i18n="f_3">Financial acumen rooted in measurable outcomes</li>
+        <li data-i18n="f_4">Deep understanding of risk, variability, and value creation</li>
+      </ul>
+
+      <p data-i18n="foundation_close">
+        Analytical yet intuitive. Strategic yet operational.
+      </p>
+    </div>
+
+    <!-- VALUE + ARETHUSA -->
+    <div class="section split" id="value" data-section>
+      <h2 data-i18n="value_title">The Philosophy of Value</h2>
+
+      <p data-i18n="value_p1">
+        Parallel to his corporate trajectory, Evandro cultivated an appreciation for timeless assets — businesses,
+        investments, and luxury products that retain meaning across time.
+      </p>
+
+      <p data-i18n="value_p2">
+        This philosophy led to the creation of a refined brand vision: one that blends structure with elegance, logic with emotion,
+        strategy with aesthetics.
+      </p>
+
+      <p class="lead" data-i18n="value_lead">For him, luxury is not excess.</p>
+
+      <div class="pullquote" data-i18n="value_quote">
+        Luxury is precision.<br />Luxury is intentionality.<br />Luxury is permanence.
+      </div>
+
+      <p data-i18n="value_arethusa">
+        In the luxury sector, he serves as <strong>Commercial Director</strong> at
+        <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">@arethusajoias</a>
+        <span class="pill" data-i18n="value_pill">Fine Jewelry</span>,
+        applying the same discipline of positioning, execution, and long-term value creation to a refined brand context.
+      </p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section split" id="contact" data-section>
+      <h2 data-i18n="contact_title">Contact</h2>
+
+      <div class="contact">
+        <div class="row" data-i18n="contact_loc">São Paulo · Global Scope</div>
+
+        <div class="row">
+          <span data-i18n="contact_linkedin">LinkedIn:</span>
+          <a href="https://www.linkedin.com/in/evandro-ferraz-camargo-efc/" target="_blank" rel="noopener">evandro-ferraz-camargo-efc</a>
+        </div>
+
+        <div class="row">
+          <span data-i18n="contact_email">Email:</span>
+          <a href="mailto:ferrazcamargo@gmail.com">ferrazcamargo@gmail.com</a>
+        </div>
+
+        <div class="row">
+          <span data-i18n="contact_instagram">Instagram:</span>
+          <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">@arethusajoias</a>
+          <span class="pill" data-i18n="contact_role">Commercial Director</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">© 2026 Evandro Camargo</div>
+
   </div>
-</div>
 
-<div class="footer">© 2026 Evandro Camargo</div>
+<script>
+  // Theme (persist)
+  const themeBtn = document.getElementById("themeBtn");
+  const langBtn = document.getElementById("langBtn");
+  const nav = document.getElementById("nav");
 
-</div>
+  function setTheme(theme){
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+    themeBtn.textContent = (theme === "light") ? "Dark" : "Light";
+  }
 
+  const savedTheme = localStorage.getItem("theme");
+  if(savedTheme){
+    setTheme(savedTheme);
+  } else {
+    // default: dark (keep your current aesthetic)
+    setTheme("dark");
+  }
+
+  themeBtn.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") || "dark";
+    setTheme(current === "light" ? "dark" : "light");
+  });
+
+  // Language toggle (EN/PT)
+  const dict = {
+    en: {
+      nav_sub:"Strategy",
+      nav_about:"About",
+      nav_trajectory:"Trajectory",
+      nav_foundation:"Foundation",
+      nav_value:"Philosophy",
+      nav_contact:"Contact",
+      tagline:"Strategic Mind. Refined Execution. Enduring Value.",
+
+      intro_1:"Some careers are built on opportunity. Others are built on discipline.",
+      intro_2:"Evandro Camargo belongs to the second category.",
+      intro_3:"With over a decade of experience navigating complex global supply chains, he developed a reputation for combining analytical precision with strategic foresight. Operating in multinational environments, leading cross-regional demand planning initiatives, and driving optimization programs across continents, he learned one fundamental truth:",
+      quote:"Excellence is not accidental. It is engineered.",
+      intro_4:"His work spans advanced forecasting methodologies, inventory strategy, data science applications, executive-level reporting, and digital transformation. Leveraging SQL, Python, Tableau, and advanced enterprise planning systems, Evandro transforms structured data into disciplined decision frameworks.",
+      intro_5:"Certified APICS CSCP, he operates within globally benchmarked supply chain standards, combining analytical rigor with execution discipline to generate measurable performance outcomes.",
+      intro_6:"But sophistication, for him, is not about complexity.",
+      intro_7:"It is about clarity.",
+      intro_8:"It is about making the difficult appear effortless.",
+
+      traj_title:"Professional trajectory (summary)",
+      traj_role_1_k:"Current",
+      traj_role_1_t:"AGCO Parts — Global Parts Demand & Supply Planning Optimization (Specialist)",
+      traj_role_1_m:"Global inventory and forecasting strategy · segmentation & scenario analysis · analytics-driven planning (SQL/Tableau)",
+      traj_role_2_k:"Previous",
+      traj_role_2_t:"AXIA AGRO (Patria Investments) — Demand & Supply Planning Specialist",
+      traj_role_2_m:"E2E planning & logistics strategy · S&OP implementation · network redesign",
+      traj_role_3_k:"Leadership",
+      traj_role_3_t:"Adubfértil — Manager of Operational Planning / Planning & Demand Coordinator",
+      traj_role_3_m:"S&OP cycles, scenario planning, procurement & logistics strategy · KPI improvement and cost optimization",
+      traj_edu_k:"Education & credentials",
+      traj_edu_t:"UFABC (Production Engineering; Science & Technology) · MITx MicroMasters · ASCM/APICS CSCP (Nov 30, 2025)",
+      traj_edu_m:"Advanced analytics (SQL/Tableau/Power BI) · ERP (SAP/TOTVS) · Planning systems (Orbit/Servigistics)",
+      traj_src_note:"(Details summarized from the CV.)",
+
+      foundation_title:"The Strategic Foundation",
+      foundation_intro:"Throughout his journey in global planning leadership roles, Evandro developed:",
+      f_1:"A disciplined approach to decision-making",
+      f_2:"A global mindset with local execution sensitivity",
+      f_3:"Financial acumen rooted in measurable outcomes",
+      f_4:"Deep understanding of risk, variability, and value creation",
+      foundation_close:"Analytical yet intuitive. Strategic yet operational.",
+
+      value_title:"The Philosophy of Value",
+      value_p1:"Parallel to his corporate trajectory, Evandro cultivated an appreciation for timeless assets — businesses, investments, and luxury products that retain meaning across time.",
+      value_p2:"This philosophy led to the creation of a refined brand vision: one that blends structure with elegance, logic with emotion, strategy with aesthetics.",
+      value_lead:"For him, luxury is not excess.",
+      value_quote:"Luxury is precision.<br />Luxury is intentionality.<br />Luxury is permanence.",
+      value_arethusa:'In the luxury sector, he serves as <strong>Commercial Director</strong> at <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">@arethusajoias</a> <span class="pill">Fine Jewelry</span>, applying the same discipline of positioning, execution, and long-term value creation to a refined brand context.',
+      value_pill:"Fine Jewelry",
+
+      contact_title:"Contact",
+      contact_loc:"São Paulo · Global Scope",
+      contact_linkedin:"LinkedIn:",
+      contact_email:"Email:",
+      contact_instagram:"Instagram:",
+      contact_role:"Commercial Director"
+    },
+
+    pt: {
+      nav_sub:"Estratégia",
+      nav_about:"Sobre",
+      nav_trajectory:"Trajetória",
+      nav_foundation:"Base",
+      nav_value:"Filosofia",
+      nav_contact:"Contato",
+      tagline:"Mente estratégica. Execução refinada. Valor duradouro.",
+
+      intro_1:"Algumas carreiras são construídas por oportunidade. Outras, por disciplina.",
+      intro_2:"Evandro Camargo pertence à segunda categoria.",
+      intro_3:"Com mais de uma década atuando em cadeias globais complexas, construiu reputação unindo precisão analítica e visão estratégica. Em ambientes multinacionais, liderando iniciativas cross-regionais e programas de otimização, consolidou uma convicção:",
+      quote:"Excelência não é acidental. É projetada.",
+      intro_4:"Seu trabalho abrange metodologias avançadas de forecast, arquitetura de estoque, aplicações de dados, reporte executivo e transformação digital. Com SQL, Python, Tableau e sistemas avançados de planejamento, transforma dados estruturados em frameworks de decisão com disciplina e consistência.",
+      intro_5:"Certificado APICS CSCP, atua alinhado a padrões globais de supply chain — combinando rigor analítico e disciplina de execução para gerar performance mensurável.",
+      intro_6:"Para ele, sofisticação não é sobre complexidade.",
+      intro_7:"É sobre clareza.",
+      intro_8:"É tornar o difícil naturalmente executável.",
+
+      traj_title:"Trajetória profissional (resumo)",
+      traj_role_1_k:"Atual",
+      traj_role_1_t:"AGCO Parts — Otimização Global de Planejamento de Demanda & Supply (Especialista)",
+      traj_role_1_m:"Estratégia global de estoque e forecast · segmentação e cenários · planejamento orientado por analytics (SQL/Tableau)",
+      traj_role_2_k:"Anterior",
+      traj_role_2_t:"AXIA AGRO (Patria Investments) — Especialista de Planejamento de Demanda & Supply",
+      traj_role_2_m:"Planejamento E2E e estratégia logística · implantação de S&OP · redesenho de rede",
+      traj_role_3_k:"Liderança",
+      traj_role_3_t:"Adubfértil — Gerente de Planejamento Operacional / Coord. de Planejamento e Demanda",
+      traj_role_3_m:"Ciclos de S&OP, cenários, compras e logística · melhoria de KPIs e otimização de custos",
+      traj_edu_k:"Formação & credenciais",
+      traj_edu_t:"UFABC (Eng. Produção; Ciência & Tecnologia) · MITx MicroMasters · ASCM/APICS CSCP (30 nov 2025)",
+      traj_edu_m:"Analytics (SQL/Tableau/Power BI) · ERP (SAP/TOTVS) · Sistemas de planejamento (Orbit/Servigistics)",
+      traj_src_note:"(Resumo baseado no currículo.)",
+
+      foundation_title:"A Base Estratégica",
+      foundation_intro:"Ao longo da atuação em planejamento global, desenvolveu:",
+      f_1:"Arquitetura disciplinada para tomada de decisão",
+      f_2:"Visão global com sensibilidade de execução local",
+      f_3:"Acúmen financeiro orientado a resultados mensuráveis",
+      f_4:"Leitura profunda de risco, variabilidade e criação de valor",
+      foundation_close:"Analítico e intuitivo. Estratégico e operacional.",
+
+      value_title:"A Filosofia de Valor",
+      value_p1:"Em paralelo à trajetória corporativa, cultivou apreço por ativos atemporais — negócios, investimentos e produtos de luxo que mantêm significado ao longo do tempo.",
+      value_p2:"Essa visão sustentou uma construção de marca refinada: estrutura com elegância, lógica com emoção, estratégia com estética.",
+      value_lead:"Para ele, luxo não é excesso.",
+      value_quote:"Luxo é precisão.<br />Luxo é intencionalidade.<br />Luxo é permanência.",
+      value_arethusa:'No setor de luxo, atua como <strong>Diretor Comercial</strong> da <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">@arethusajoias</a> <span class="pill">Joalheria</span>, aplicando disciplina de posicionamento, execução e criação de valor de longo prazo.',
+      value_pill:"Joalheria",
+
+      contact_title:"Contato",
+      contact_loc:"São Paulo · Global Scope",
+      contact_linkedin:"LinkedIn:",
+      contact_email:"Email:",
+      contact_instagram:"Instagram:",
+      contact_role:"Diretor Comercial"
+    }
+  };
+
+  function setLang(lang){
+    localStorage.setItem("lang", lang);
+    document.documentElement.lang = lang;
+
+    // Update plain-text nodes
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      const val = dict[lang][key];
+      if(!val) return;
+
+      // allow HTML in specific blocks (like the arethusa paragraph)
+      if(key === "value_arethusa" || key === "value_quote"){
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    // button label
+    langBtn.textContent = (lang === "en") ? "PT" : "EN";
+  }
+
+  const savedLang = localStorage.getItem("lang") || "en";
+  setLang(savedLang);
+
+  langBtn.addEventListener("click", () => {
+    const current = localStorage.getItem("lang") || "en";
+    setLang(current === "en" ? "pt" : "en");
+  });
+
+  // Navbar shrink + active section
+  window.addEventListener("scroll", () => {
+    if(window.scrollY > 18) nav.classList.add("shrink");
+    else nav.classList.remove("shrink");
+  });
+
+  const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
+  const sections = ["about","trajectory","foundation","value","contact"].map(id => document.getElementById(id));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const id = entry.target.id;
+        navLinks.forEach(a => a.classList.toggle("active", a.dataset.nav === id));
+      }
+    });
+  }, { root: null, threshold: 0.35 });
+
+  sections.forEach(s => s && io.observe(s));
+
+  // Section reveal
+  const reveal = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting) e.target.classList.add("in");
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll("[data-section], .section").forEach(el => reveal.observe(el));
+</script>
 </body>
 </html>
