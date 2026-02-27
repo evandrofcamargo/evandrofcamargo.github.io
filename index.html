@@ -3,758 +3,647 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Evandro Camargo</title>
-<meta name="description" content="Strategic profile of Evandro Camargo: global supply chain planning, analytics, and long-term value creation." />
-
+<title>Evandro Camargo · Supply Chain Strategy</title>
+<meta name="description" content="Evandro Ferraz Camargo — Global Supply Chain Planning, Analytics & Strategy" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#0f0f0f;
-    --bg2:#0b0b0b;
-    --text:#f2f2f2;
-    --muted:#c8c8c8;
-    --soft:#a9a9a9;
-    --line:rgba(255,255,255,.09);
-    --card:rgba(255,255,255,.035);
-    --shadow: 0 28px 70px rgba(0,0,0,.55);
-    --accent: rgba(255,255,255,.90);
-  }
-
-  /* Light theme (applies to <html data-theme="light">) */
-  html[data-theme="light"]{
-    --bg:#f6f4f1;
-    --bg2:#f1eee9;
-    --text:#121212;
-    --muted:#2c2c2c;
-    --soft:#4b4b4b;
-    --line:rgba(0,0,0,.10);
-    --card:rgba(0,0,0,.03);
-    --shadow: 0 20px 55px rgba(0,0,0,.15);
-    --accent: rgba(0,0,0,.90);
-  }
-
-  *{ box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
-  html, body{ min-height:100%; }
-
-  body{
-    margin:0;
-    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    color:var(--text);
-    line-height:1.9;
-    letter-spacing:.1px;
-    background:
-      radial-gradient(1200px 900px at 20% 12%, rgba(255,255,255,.06), transparent 55%),
-      radial-gradient(900px 800px at 86% 28%, rgba(255,255,255,.05), transparent 55%),
-      linear-gradient(180deg, var(--bg), var(--bg2));
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* subtle texture */
-  body:before{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    opacity:.085;
-    mix-blend-mode: overlay;
-    background:
-      radial-gradient(900px 700px at 30% 40%, rgba(255,255,255,.14), transparent 60%),
-      radial-gradient(800px 700px at 70% 55%, rgba(255,255,255,.10), transparent 65%),
-      linear-gradient(120deg, rgba(255,255,255,.05), transparent 35%, rgba(255,255,255,.04));
-  }
-
-  /* NAV */
-  .nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:1000;
-    border-bottom:1px solid var(--line);
-    background: rgba(15,15,15,.55);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transition: background .18s ease;
-  }
-  html[data-theme="light"] .nav{
-    background: rgba(246,244,241,.65);
-  }
-
-  .nav-inner{
-    max-width:1100px;
-    margin:auto;
-    padding:18px 40px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:18px;
-    transition: padding .18s ease;
-  }
-  .nav.shrink .nav-inner{ padding:12px 40px; }
-
-  .brand{
-    display:flex;
-    align-items:baseline;
-    gap:14px;
-    min-width: 240px;
-  }
-  .brand .name{
-    font-family: "Cormorant Garamond", serif;
-    font-weight:600;
-    letter-spacing:.2px;
-    font-size:22px;
-    color:var(--accent);
-    white-space:nowrap;
-  }
-
+:root {
+  --bg-a: #0c0c10;
+  --bg-b: #111118;
+  --bg-c: #16161f;
+  --text: #e4e0db;
+  --muted: #96938e;
+  --soft: #5c5a56;
+  --accent: #c2bab0;
+  --gold: #8a7a62;
+  --line: rgba(180,168,150,.10);
+  --line2: rgba(180,168,150,.05);
+  --card: rgba(180,168,150,.04);
+  --r: 10px;
+  --shadow: 0 24px 60px rgba(0,0,0,.6);
+}
+html[data-theme="light"] {
+  --bg-a: #f4f1ec;
+  --bg-b: #ece8df;
+  --bg-c: #e5e0d5;
+  --text: #19180f;
+  --muted: #4a4844;
+  --soft: #7c7a76;
+  --accent: #2e2c28;
+  --gold: #6b5a3e;
+  --line: rgba(50,44,28,.12);
+  --line2: rgba(50,44,28,.06);
+  --card: rgba(50,44,28,.04);
+  --shadow: 0 16px 44px rgba(0,0,0,.10);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',-apple-system,sans-serif;
+  color:var(--text);line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  min-height:100svh;
+  background:linear-gradient(158deg,#0c0c10 0%,#111118 35%,#1a1628 65%,#0f1018 100%);
+  background-attachment:fixed;
+}
+html[data-theme="light"] body{
+  background:linear-gradient(158deg,#f8f5ef 0%,#ede8df 38%,#e4ddd2 65%,#d8d1c6 100%);
+  background-attachment:fixed;
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
+  opacity:.016;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:180px;
+}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  border-bottom:1px solid var(--line);
+  background:rgba(12,12,16,.78);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+}
+html[data-theme="light"] .nav{background:rgba(248,245,239,.80)}
+.nav-inner{
+  max-width:1080px;margin:auto;padding:0 32px;
+  display:flex;align-items:center;height:58px;
+}
+.brand{
+  font-family:'DM Sans',sans-serif;
+  font-size:13.5px;font-weight:500;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);text-decoration:none;margin-right:auto;
+}
+.brand::after{display:none}
+.nav-links{display:flex;gap:2px;align-items:center}
+.nav-links a{
+  font-size:11px;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;
+  padding:6px 12px;border-radius:6px;
+  transition:color .14s,background .14s;
+}
+.nav-links a::after{display:none}
+.nav-links a:hover{color:var(--text);background:var(--card)}
+.nav-links a.active{color:var(--accent)}
+.nav-actions{display:flex;gap:6px;margin-left:16px}
+.btn-nav{
+  font-family:'DM Mono',monospace;
+  font-size:10px;letter-spacing:.08em;
+  padding:5px 12px;border-radius:6px;
+  border:1px solid var(--line);background:transparent;
+  color:var(--muted);cursor:pointer;
+  transition:color .14s,border-color .14s;
+}
+.btn-nav:hover{color:var(--accent);border-color:var(--gold)}
+.wrap{max-width:1080px;margin:auto;padding:0 32px}
+.hero{min-height:100svh;padding-top:58px;display:flex;flex-direction:column;justify-content:flex-end}
+.hero-content{
+  padding:80px 32px 64px;
+  max-width:1080px;margin:auto;width:100%;
+  display:grid;grid-template-columns:1fr 320px;gap:72px;align-items:end;
+}
+.hero-eyebrow{
+  font-family:'DM Mono',monospace;
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:18px;
+  display:flex;align-items:center;gap:10px;
+}
+.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.hero h1{
+  font-family:'DM Sans',sans-serif;
+  font-size:clamp(46px,6.5vw,80px);
+  font-weight:300;line-height:1.05;
+  letter-spacing:-.01em;
+  color:var(--accent);
+  margin-bottom:22px;
+}
+.hero-tagline{
+  font-size:16px;font-weight:300;color:var(--muted);
+  line-height:1.7;max-width:480px;margin-bottom:32px;
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{
+  font-family:'DM Mono',monospace;
+  font-size:10.5px;letter-spacing:.09em;
+  padding:5px 11px;border-radius:4px;
+  border:1px solid var(--line);color:var(--soft);background:var(--card);
+}
+.hero-side{display:flex;flex-direction:column;gap:16px}
+.hero-photo{width:100%;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow);display:block}
+.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1px;background:var(--line);
+  border-radius:var(--r);overflow:hidden;border:1px solid var(--line);
+}
+.stat{background:var(--bg-c);padding:16px 18px}
+.stat-num{font-size:22px;font-weight:600;color:var(--accent);line-height:1;margin-bottom:3px}
+.stat-label{font-size:10.5px;color:var(--soft);letter-spacing:.04em}
+.hero-bar{
+  border-top:1px solid var(--line);padding:18px 32px;
+  max-width:1080px;margin:0 auto;width:100%;
+  display:flex;align-items:center;gap:28px;flex-wrap:wrap;
+}
+.ci{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);text-decoration:none}
+.ci::after{display:none}
+.ci:hover{color:var(--accent)}
+.ci-icon{
+  width:26px;height:26px;border-radius:5px;
+  background:var(--card);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.ci-icon svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.6}
+section{padding:88px 0}
+section+section{border-top:1px solid var(--line)}
+.sec-label{
+  font-family:'DM Mono',monospace;
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.sec-label::after{content:'';width:60px;height:1px;background:var(--line)}
+.sec-title{
+  font-size:clamp(26px,3.5vw,38px);font-weight:300;
+  color:var(--accent);line-height:1.15;margin-bottom:44px;max-width:600px;
+}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.about-text p{color:var(--muted);font-size:15.5px;font-weight:300;margin-bottom:16px;line-height:1.8}
+.about-text .lead{color:var(--text);font-size:17px;font-weight:400}
+.blockquote{
+  margin:28px 0;padding:18px 22px;
+  border-left:2px solid var(--gold);
+  background:var(--card);border-radius:0 var(--r) var(--r) 0;
+  font-size:16px;font-style:italic;color:var(--text);line-height:1.55;
+}
+.focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:24px}
+.focus-item{
+  display:flex;align-items:flex-start;gap:8px;
+  padding:11px 13px;border:1px solid var(--line2);
+  border-radius:8px;background:var(--card);
+  font-size:12.5px;color:var(--muted);transition:border-color .18s;
+}
+.focus-item:hover{border-color:var(--line);color:var(--text)}
+.focus-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:5px;flex-shrink:0}
+.about-right{display:flex;flex-direction:column;gap:14px}
+.cert-card{
+  border:1px solid var(--line);background:var(--card);border-radius:var(--r);
+  padding:17px 20px;display:flex;align-items:flex-start;gap:13px;
+}
+.cert-icon{
+  width:32px;height:32px;border-radius:7px;
+  background:linear-gradient(135deg,var(--gold),var(--accent));
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:15px;
+}
+.cert-title{font-size:13.5px;font-weight:500;color:var(--text);margin-bottom:2px}
+.cert-sub{font-size:12px;color:var(--muted)}
+.timeline{display:flex;flex-direction:column}
+.tl-item{display:grid;grid-template-columns:200px 1fr;position:relative}
+.tl-item::before{
+  content:'';position:absolute;
+  left:199px;top:0;bottom:0;width:1px;background:var(--line);
+}
+.tl-item:last-child::before{bottom:auto;height:30px}
+.tl-left{padding:28px 36px 28px 0;text-align:right}
+.tl-co{font-size:13px;font-weight:600;color:var(--accent);margin-bottom:3px}
+.tl-period{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--soft);letter-spacing:.05em}
+.tl-ind{font-size:11px;color:var(--soft);margin-top:3px;font-style:italic}
+.tl-right{padding:28px 0 28px 36px;position:relative}
+.tl-dot{
+  position:absolute;left:-5px;top:34px;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--gold);border:2px solid var(--bg-a);
+}
+.tl-role{font-size:14.5px;font-weight:500;color:var(--text);margin-bottom:8px}
+.tl-badge{
+  display:inline-block;margin-left:9px;
+  font-family:'DM Mono',monospace;
+  font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  padding:2px 7px;border-radius:4px;
+  background:var(--card);border:1px solid var(--line);color:var(--gold);
+  vertical-align:middle;
+}
+.tl-desc{font-size:13.5px;font-weight:300;color:var(--muted);line-height:1.7;max-width:580px}
+.tl-kpis{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.kpi{
+  font-family:'DM Mono',monospace;
+  font-size:10px;letter-spacing:.06em;
+  padding:4px 9px;border-radius:4px;
+  background:rgba(138,122,98,.08);border:1px solid rgba(138,122,98,.18);
+  color:var(--gold);
+}
+.skills-layout{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.skill-group{border:1px solid var(--line);border-radius:var(--r);padding:22px;background:var(--card)}
+.sg-title{
+  font-family:'DM Mono',monospace;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:18px;
+  padding-bottom:10px;border-bottom:1px solid var(--line2);
+}
+.skill-list{display:flex;flex-direction:column;gap:11px}
+.skill-item{display:flex;flex-direction:column;gap:4px}
+.skill-name{font-size:13px;font-weight:400;color:var(--text)}
+.skill-bar{height:2px;background:var(--line);border-radius:2px;overflow:hidden}
+.skill-fill{
+  height:100%;border-radius:2px;width:0;
+  background:linear-gradient(90deg,var(--gold),var(--accent));
+  transition:width 1s cubic-bezier(.4,0,.2,1);
+}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin-top:32px}
+.tool-card{
+  border:1px solid var(--line);border-radius:9px;
+  padding:14px 13px;background:var(--card);
+  transition:border-color .18s,transform .18s;cursor:default;
+}
+.tool-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.tool-name{font-size:12.5px;font-weight:500;color:var(--text)}
+.tool-cat{font-family:'DM Mono',monospace;font-size:9.5px;color:var(--soft);letter-spacing:.07em;margin-top:3px}
+.tool-lvl{display:flex;gap:3px;margin-top:8px}
+.td{width:5px;height:5px;border-radius:50%;background:var(--line)}
+.td.on{background:var(--gold)}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.edu-card{
+  border:1px solid var(--line);border-radius:var(--r);
+  padding:22px 20px;background:var(--card);
+  display:flex;flex-direction:column;gap:7px;
+}
+.edu-badge{
+  font-family:'DM Mono',monospace;
+  font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+  padding:3px 9px;border-radius:4px;align-self:flex-start;
+  background:rgba(138,122,98,.08);border:1px solid var(--line);color:var(--gold);
+}
+.edu-title{font-size:14.5px;font-weight:500;color:var(--text)}
+.edu-inst{font-size:12.5px;color:var(--muted)}
+.edu-year{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--soft)}
+.arethusa{border:1px solid var(--line);border-radius:16px;background:var(--card);overflow:hidden}
+.arethusa-inner{padding:48px 52px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.a-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.a-title{font-size:26px;font-weight:300;color:var(--accent);line-height:1.2;margin-bottom:14px}
+.a-desc{font-size:14.5px;font-weight:300;color:var(--muted);line-height:1.75;max-width:480px}
+.a-link{
+  display:inline-flex;align-items:center;gap:7px;margin-top:20px;
+  font-size:12.5px;font-weight:500;color:var(--accent);
+  border:1px solid var(--line);border-radius:7px;
+  padding:9px 16px;background:var(--card);text-decoration:none;
+  transition:border-color .18s,background .18s;
+}
+.a-link::after{display:none}
+.a-link:hover{border-color:var(--gold)}
+.a-link svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.8}
+.a-quote{border-left:2px solid var(--gold);padding:22px 26px;background:rgba(138,122,98,.05);border-radius:0 10px 10px 0;white-space:nowrap}
+.a-quote p{font-size:15px;font-style:italic;color:var(--text);line-height:1.7}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cc{border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;background:var(--card)}
+.cc-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--soft);margin-bottom:6px}
+.cc-value{font-size:14.5px;font-weight:400;color:var(--text)}
+.cc-sub{font-size:12px;color:var(--muted);margin-top:3px}
+.cc a{color:var(--accent);text-decoration:none}
+.cc a::after{display:none}
+.cc a:hover{text-decoration:underline}
+footer{
+  border-top:1px solid var(--line);padding:28px 32px;
+  max-width:1080px;margin:auto;
+  display:flex;align-items:center;justify-content:space-between;
+  font-family:'DM Mono',monospace;font-size:10.5px;color:var(--soft);letter-spacing:.08em;
+}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:880px){
+  .wrap,footer{padding:0 20px}
+  .nav-inner{padding:0 20px}
+  .hero-content{grid-template-columns:1fr;padding:60px 20px 52px;gap:40px}
+  .hero-bar{padding:16px 20px}
+  .hero-side{flex-direction:row;gap:16px}
+  .hero-photo{width:180px}
+  .hero-stats{flex:1}
+  .about-grid{grid-template-columns:1fr}
+  .tl-item{grid-template-columns:1fr}
+  .tl-item::before{display:none}
+  .tl-left{padding:24px 0 4px;text-align:left;border-bottom:1px solid var(--line2)}
+  .tl-right{padding:14px 0 28px}
+  .tl-dot{display:none}
+  .skills-layout{grid-template-columns:1fr}
+  .edu-grid{grid-template-columns:1fr}
+  .arethusa-inner{grid-template-columns:1fr;padding:32px 24px}
+  .a-quote{white-space:normal}
+  .contact-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:6px;text-align:center}
+}
+.hamburger{
+  display:none;
+  background:none;border:1px solid var(--line);
+  border-radius:6px;padding:6px 10px;cursor:pointer;
+  color:var(--muted);transition:color .14s,border-color .14s;
+  margin-left:8px;
+}
+.hamburger:hover{color:var(--accent);border-color:var(--gold)}
+.hamburger svg{display:block;width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8}
+@media(max-width:880px){
   .nav-links{
-    display:flex;
-    align-items:center;
-    gap:22px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-  .nav-links a{
-    color:var(--soft);
-    text-decoration:none;
-    font-size:12px;
-    letter-spacing:.28em;
-    text-transform:uppercase;
-    position:relative;
-    padding:6px 0;
-    transition: color .15s ease, opacity .15s ease;
-  }
-  .nav-links a:hover{ color:var(--accent); }
-  .nav-links a.active{ color:var(--accent); }
-
-  .nav-links a:focus-visible,
-  .btn:focus-visible,
-  a:focus-visible{
-    outline: 2px solid var(--accent);
-    outline-offset: 4px;
-    border-radius: 8px;
-  }
-
-  .nav-links a:after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-2px;
-    width:100%;
-    height:1px;
-    background: var(--accent);
-    transform: scaleX(.25);
-    transform-origin:left;
-    opacity:.45;
-    transition: transform .18s ease, opacity .18s ease;
-  }
-  .nav-links a.active:after{
-    transform: scaleX(1);
-    opacity:.75;
-  }
-
-  .nav-actions{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    min-width: 240px;
-    justify-content:flex-end;
-  }
-
-  .btn{
-    border:1px solid var(--line);
-    background: transparent;
-    color:var(--accent);
-    padding:8px 10px;
-    border-radius:999px;
-    font-size:12px;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    cursor:pointer;
-    transition: transform .12s ease, opacity .12s ease;
-  }
-  .btn:hover{ opacity:.85; }
-  .btn:active{ transform: translateY(1px); }
-
-  .container{
-    max-width:1100px;
-    margin:auto;
-    padding:140px 40px 96px 40px;
-  }
-
-  .hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:64px;
-    padding-bottom:56px;
+    display:none;
+    position:fixed;top:58px;left:0;right:0;
+    background:rgba(12,12,16,.96);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
     border-bottom:1px solid var(--line);
+    flex-direction:column;gap:0;padding:8px 0 12px;
+    z-index:800;
   }
-  .hero h1{
-    font-family: "Cormorant Garamond", serif;
-    font-size:56px;
-    font-weight:600;
-    letter-spacing:.2px;
-    margin:0 0 12px 0;
-    text-wrap:balance;
+  html[data-theme="light"] .nav-links{background:rgba(248,245,239,.97)}
+  .nav-links.open{display:flex}
+  .nav-links a{
+    padding:11px 24px;border-radius:0;
+    font-size:12px;letter-spacing:.14em;
+    border-bottom:1px solid var(--line2);
   }
-  .tagline{
-    font-size:18px;
-    color:var(--muted);
-    margin:0;
-    max-width:620px;
-    text-wrap:pretty;
-  }
-  .hero img{
-    width:380px;
-    border-radius:14px;
-    display:block;
-    box-shadow: var(--shadow);
-    border:1px solid var(--line);
-    outline:1px solid rgba(255,255,255,.04);
-    outline-offset:6px;
-  }
-
-  .section{
-    margin-top:72px;
-    max-width:920px;
-    opacity:0;
-    transform: translateY(10px);
-    transition: opacity .45s ease, transform .45s ease;
-  }
-  .section.in{
-    opacity:1;
-    transform: translateY(0);
-  }
-
-  .section h2{
-    font-size:22px;
-    font-weight:500;
-    margin:0 0 18px 0;
-    letter-spacing:.2px;
-  }
-
-  .section p{
-    margin:0 0 18px 0;
-    color:var(--muted);
-    font-size:16.5px;
-    text-wrap:pretty;
-  }
-
-  .lead{
-    color:var(--text);
-    font-size:18px;
-  }
-
-  .split{
-    margin-top:72px;
-    padding:40px 34px;
-    border:1px solid var(--line);
-    border-radius:16px;
-    background: var(--card);
-    backdrop-filter: blur(6px);
-  }
-
-  .pullquote{
-    margin:26px 0 24px 0;
-    padding:18px 20px;
-    border-left:2px solid rgba(255,255,255,.28);
-    color:var(--text);
-    font-size:18px;
-    background: rgba(255,255,255,.02);
-    border-radius:10px;
-    font-style:italic;
-  }
-  html[data-theme="light"] .pullquote{
-    border-left:2px solid rgba(0,0,0,.22);
-  }
-
-  .bullets{
-    margin:14px 0 0 0;
-    padding:0;
-    list-style:none;
-  }
-  .bullets li{
-    margin:10px 0;
-    color:var(--muted);
-    font-size:16.5px;
-  }
-  .bullets li::before{
-    content:"• ";
-    color:var(--accent);
-    opacity:.9;
-  }
-
-  a{
-    color:var(--accent);
-    text-decoration:none;
-    position:relative;
-  }
-  a:after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-3px;
-    width:100%;
-    height:1px;
-    background: var(--accent);
-    transform: scaleX(.35);
-    transform-origin:left;
-    transition: transform .18s ease, opacity .18s ease;
-    opacity:.55;
-  }
-  a:hover:after{
-    transform: scaleX(1);
-    opacity:.9;
-  }
-
-  .pill{
-    display:inline-block;
-    margin-left:10px;
-    padding:3px 10px;
-    font-size:12px;
-    letter-spacing:.2px;
-    border:1px solid var(--line);
-    border-radius:999px;
-    color: var(--soft);
-    background: rgba(255,255,255,.03);
-    vertical-align:middle;
-  }
-
-  .grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:18px;
-  }
-  .card{
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:18px 18px;
-    background: rgba(255,255,255,.02);
-  }
-  .card .kicker{
-    font-size:12px;
-    letter-spacing:.28em;
-    text-transform:uppercase;
-    color:var(--soft);
-    margin:0 0 8px 0;
-  }
-  .card .title{
-    font-size:16px;
-    color:var(--accent);
-    margin:0 0 6px 0;
-    font-weight:500;
-  }
-  .card .meta{
-    font-size:14px;
-    color:var(--muted);
-    margin:0;
-  }
-
-  .contact{
-    margin-top:14px;
-    color:var(--muted);
-    font-size:16.5px;
-  }
-  .contact .row{ margin:12px 0; }
-
-  .footer{
-    margin-top:110px;
-    padding-top:26px;
-    border-top:1px solid var(--line);
-    color:#777;
-    font-size:13px;
-    letter-spacing:.04em;
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{
-      animation:none !important;
-      transition:none !important;
-      scroll-behavior:auto !important;
-    }
-  }
-
-  @media (max-width: 920px){
-    .nav-inner{ padding:14px 18px; }
-    .nav.shrink .nav-inner{ padding:10px 18px; }
-    .brand{ min-width: unset; }
-    .nav-actions{ min-width: unset; }
-    .hero{ flex-direction:column; text-align:center; }
-    .hero img{ width:280px; }
-    .split{ padding:32px 20px; }
-    .grid{ grid-template-columns: 1fr; }
-  }
+  .nav-links a:last-child{border-bottom:none}
+  .hamburger{display:block}
+}
+@media(max-width:540px){
+  .hero h1{font-size:40px}
+  .hero-side{flex-direction:column}
+  .hero-photo{width:100%;max-width:260px}
+  .focus-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
 </style>
 </head>
-
 <body>
-  <!-- NAV -->
-  <div class="nav" id="nav">
-    <div class="nav-inner">
-      <div class="brand">
-        <div class="name">Evandro Camargo</div>
-      </div>
 
-      <div class="nav-links" aria-label="Primary">
-        <a href="#profile" data-nav="profile" class="active" data-i18n="nav_profile">Profile</a>
-        <a href="#path" data-nav="path" data-i18n="nav_path">Professional Path</a>
-        <a href="#foundation" data-nav="foundation" data-i18n="nav_foundation">Foundation</a>
-        <a href="#value" data-nav="value" data-i18n="nav_value">Philosophy</a>
-        <a href="#contact" data-nav="contact" data-i18n="nav_contact">Contact</a>
-      </div>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">Evandro Camargo</a>
+    <div class="nav-links">
+      <a href="#about" data-nav="about">About</a>
+      <a href="#experience" data-nav="experience">Experience</a>
+      <a href="#skills" data-nav="skills">Skills</a>
+      <a href="#education" data-nav="education">Education</a>
+      <a href="#philosophy" data-nav="philosophy">Philosophy</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-nav" id="langBtn">PT</button>
+      <button class="btn-nav" id="themeBtn">Light</button>
+      <button class="hamburger" id="menuBtn" aria-label="Menu">
+        <svg id="menuIcon" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
 
-      <div class="nav-actions">
-        <button class="btn" id="langBtn" aria-label="Toggle language">PT</button>
-        <button class="btn" id="themeBtn" aria-label="Toggle theme">Light</button>
+<div class="hero" id="top">
+  <div class="hero-content">
+    <div>
+      <div class="hero-eyebrow" data-i18n="eyebrow">Supply Chain Strategy · Global Operations</div>
+      <h1 data-i18n="h1">Evandro<br>Camargo</h1>
+      <p class="hero-tagline" data-i18n="tagline">Strategic Supply Chain Leader with 10+ years driving global demand planning, inventory optimization, and digital transformation across multinational environments.</p>
+      <div class="hero-tags">
+        <span class="tag">S&amp;OP / IBP</span>
+        <span class="tag">Demand Planning</span>
+        <span class="tag">Inventory Strategy</span>
+        <span class="tag">SQL · Python · Tableau</span>
+        <span class="tag">APICS CSCP</span>
+        <span class="tag" data-i18n="tag_loc">São Paulo · Global</span>
+      </div>
+    </div>
+    <div class="hero-side">
+      <img src="profile.png" alt="Evandro Camargo" class="hero-photo" onerror="this.style.display='none'" />
+      <div class="hero-stats" style="grid-template-columns:1fr">
+        <div class="stat"><div class="stat-num">10+</div><div class="stat-label" data-i18n="stat_y">Years exp.</div></div>
       </div>
     </div>
   </div>
-
-  <div class="container">
-
-    <!-- HERO -->
-    <div class="hero section in" id="profile">
-      <div>
-        <h1>Evandro Camargo</h1>
-        <p class="tagline" data-i18n="tagline">Strategic Mind. Refined Execution. Enduring Value.</p>
-      </div>
-      <img src="/profile.png?v=60" alt="Evandro Camargo" />
-    </div>
-
-    <!-- INTRO -->
-    <div class="section" data-section>
-      <p class="lead" data-i18n="intro_1">Some careers are built on opportunity. Others are built on discipline.</p>
-      <p class="lead" data-i18n="intro_2">Evandro Camargo belongs to the second category.</p>
-
-      <p data-i18n="intro_3">
-        With over a decade of experience navigating complex global supply chains, he developed a reputation for combining analytical precision with strategic foresight.
-        Operating in multinational environments, leading cross-regional demand planning initiatives, and driving optimization programs across continents, he learned one fundamental truth:
-      </p>
-
-      <div class="pullquote" data-i18n="quote">Excellence is not accidental. It is engineered.</div>
-
-      <p data-i18n="intro_4">
-        His work spans advanced forecasting methodologies, inventory strategy, data science applications, executive-level reporting, and digital transformation.
-        Leveraging SQL, Python, Tableau, and advanced enterprise planning systems, Evandro transforms structured data into disciplined decision frameworks.
-      </p>
-
-      <p data-i18n="intro_5">
-        Certified APICS CSCP, he operates within globally benchmarked supply chain standards, combining analytical rigor with execution discipline
-        to generate measurable performance outcomes.
-      </p>
-
-      <p data-i18n="intro_6">But sophistication, for him, is not about complexity.</p>
-      <p data-i18n="intro_7">It is about clarity.</p>
-      <p data-i18n="intro_8">It is about making the difficult appear effortless.</p>
-    </div>
-
-    <!-- PROFESSIONAL PATH -->
-    <div class="section split" id="path" data-section>
-      <h2 data-i18n="path_title">Professional Path</h2>
-
-      <div class="grid">
-        <div class="card">
-          <p class="kicker" data-i18n="path_role_1_k">Current</p>
-          <p class="title" data-i18n="path_role_1_t">AGCO Parts · Global Parts Demand & Supply Optimization Specialist</p>
-          <p class="meta" data-i18n="path_role_1_m">Global inventory strategy · Forecasting architecture · Analytics-driven planning</p>
-        </div>
-
-        <div class="card">
-          <p class="kicker" data-i18n="path_role_2_k">Previous</p>
-          <p class="title" data-i18n="path_role_2_t">AXIA AGRO (Patria Investments) · Demand & Supply Planning Specialist</p>
-          <p class="meta" data-i18n="path_role_2_m">End-to-end planning · IBP/S&OP implementation · Network strategy</p>
-        </div>
-
-        <div class="card">
-          <p class="kicker" data-i18n="path_role_3_k">Leadership</p>
-          <p class="title" data-i18n="path_role_3_t">Adufértil · Manager of Operational Planning / Planning & Demand Coordinator</p>
-          <p class="meta" data-i18n="path_role_3_m">IBP/S&OP cycle · Procurement & logistics strategy · KPI improvement</p>
-        </div>
-
-        <div class="card">
-          <p class="kicker" data-i18n="path_edu_k">Education & credentials</p>
-          <p class="title" data-i18n="path_edu_t">Academic Degrees & Certifications</p>
-          <p class="meta" data-i18n="path_edu_m">
-            • B.Sc. in Production Engineering · Federal University of ABC (UFABC)<br>
-            • B.Sc. in Science & Technology · Federal University of ABC (UFABC)<br>
-            • MITx MicroMasters · Supply Chain Technology and Systems<br>
-            • ASCM/APICS CSCP · Certified Supply Chain Professional (Nov 30, 2025)
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- FOUNDATION -->
-    <div class="section split" id="foundation" data-section>
-      <h2 data-i18n="foundation_title">The Strategic Foundation</h2>
-
-      <p data-i18n="foundation_intro">Throughout his journey in global planning leadership roles, Evandro developed:</p>
-
-      <ul class="bullets">
-        <li data-i18n="f_1">A disciplined approach to decision-making</li>
-        <li data-i18n="f_2">A global mindset with local execution sensitivity</li>
-        <li data-i18n="f_3">Financial acumen rooted in measurable outcomes</li>
-        <li data-i18n="f_4">Deep understanding of risk, variability, and value creation</li>
-      </ul>
-
-      <p data-i18n="foundation_close">Analytical yet intuitive. Strategic yet operational.</p>
-    </div>
-
-    <!-- VALUE + ARETHUSA -->
-    <div class="section split" id="value" data-section>
-      <h2 data-i18n="value_title">The Philosophy of Value</h2>
-
-      <p data-i18n="value_p1">
-        Parallel to his corporate trajectory, Evandro cultivated an appreciation for timeless assets · businesses · investments · luxury products.
-      </p>
-
-      <p data-i18n="value_p2">
-        This philosophy led to the creation of a refined brand vision · structure with elegance · logic with emotion · strategy with aesthetics.
-      </p>
-
-      <p class="lead" data-i18n="value_lead">For him, luxury is not excess.</p>
-
-      <div class="pullquote" data-i18n="value_quote">
-        Luxury is precision.<br />Luxury is intentionality.<br />Luxury is permanence.
-      </div>
-
-      <p data-i18n="value_arethusa">
-        In the luxury sector, he serves as <strong>Commercial Director</strong> at
-        <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">@arethusajoias</a>
-        <span class="pill">Fine Jewelry</span>,
-        applying the same discipline of positioning, execution, and long-term value creation to a refined brand context.
-      </p>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="section split" id="contact" data-section>
-      <h2 data-i18n="contact_title">Contact</h2>
-
-      <div class="contact">
-        <div class="row" data-i18n="contact_loc">São Paulo · Global Scope</div>
-
-        <div class="row">
-          <span data-i18n="contact_linkedin">LinkedIn:</span>
-          <a href="https://www.linkedin.com/in/evandro-ferraz-camargo-efc/" target="_blank" rel="noopener">evandro-ferraz-camargo-efc</a>
-        </div>
-
-        <div class="row">
-          <span data-i18n="contact_email">Email:</span>
-          <a href="mailto:ferrazcamargo@gmail.com">ferrazcamargo@gmail.com</a>
-        </div>
-
-        <div class="row">
-          <span data-i18n="contact_instagram">Instagram:</span>
-          <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">@arethusajoias</a>
-          <span class="pill" data-i18n="contact_role">Commercial Director</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">© 2026 Evandro Camargo</div>
-
+  <div class="hero-bar wrap">
+    <a class="ci" href="mailto:ferrazcamargo@gmail.com">
+      <span class="ci-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></span>
+      ferrazcamargo@gmail.com
+    </a>
+    <a class="ci" href="https://www.linkedin.com/in/evandro-ferraz-camargo-efc/" target="_blank" rel="noopener">
+      <span class="ci-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 10v7m0-5a3 3 0 0 1 6 0v5"/></svg></span>
+      evandro-ferraz-camargo-efc
+    </a>
+    <span class="ci">
+      <span class="ci-icon"><svg viewBox="0 0 24 24" stroke-width=".8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span>
+      São Paulo, Brasil
+    </span>
   </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-label reveal" data-i18n="sl_about">Profile</div>
+    <div class="sec-title reveal" data-i18n="st_about">Analytical precision.<br>Strategic foresight.</div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="lead" data-i18n="about_lead">Some careers are built on opportunity. Others are built on discipline.</p>
+        <p data-i18n="about_p1">With over a decade navigating complex global supply chains, Evandro built a reputation for combining analytical precision with strategic foresight — leading cross-regional demand planning and driving optimization programs across continents.</p>
+        <div class="blockquote" data-i18n="about_q">Excellence is not accidental. It is engineered.</div>
+        <p data-i18n="about_p2">His work spans advanced forecasting, inventory strategy, data science, executive reporting, and digital transformation. Leveraging SQL, Python, Tableau and enterprise planning systems, he transforms data into disciplined decision frameworks.</p>
+        <div class="focus-grid">
+          <div class="focus-item"><span class="focus-dot"></span><span data-i18n="f1">Global Demand &amp; Inventory Strategy</span></div>
+          <div class="focus-item"><span class="focus-dot"></span><span data-i18n="f2">E2E Supply Chain Transformation</span></div>
+          <div class="focus-item"><span class="focus-dot"></span><span data-i18n="f3">S&amp;OP / IBP Process Leadership</span></div>
+          <div class="focus-item"><span class="focus-dot"></span><span data-i18n="f4">Scenario Planning &amp; Risk Mitigation</span></div>
+          <div class="focus-item"><span class="focus-dot"></span><span data-i18n="f5">Analytics-Driven Decision Support</span></div>
+          <div class="focus-item"><span class="focus-dot"></span><span data-i18n="f6">Cross-Functional Multinational Teams</span></div>
+        </div>
+      </div>
+      <div class="about-right reveal">
+        <div class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-title">APICS CSCP</div><div class="cert-sub" data-i18n="c1">Certified Supply Chain Professional · ASCM · Nov 2025</div></div></div>
+        <div class="cert-card"><div class="cert-icon">🎓</div><div><div class="cert-title">MITx MicroMasters</div><div class="cert-sub" data-i18n="c2">Supply Chain Technology &amp; Systems · MIT</div></div></div>
+        <div class="cert-card"><div class="cert-icon">⚙️</div><div><div class="cert-title" data-i18n="c3t">Production Engineering</div><div class="cert-sub" data-i18n="c3">Federal University of ABC — UFABC</div></div></div>
+        <div class="cert-card"><div class="cert-icon">🌐</div><div><div class="cert-title" data-i18n="c4t">Languages</div><div class="cert-sub" data-i18n="c4">Portuguese (Native) · English (Professional)</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-label reveal" data-i18n="sl_exp">Professional Experience</div>
+    <div class="sec-title reveal" data-i18n="st_exp">Decade of global impact</div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-left">
+          <div class="tl-co">AGCO Parts</div>
+          <div class="tl-period">Aug 2023 — Present</div>
+          <div class="tl-ind" data-i18n="agco_ind">Agricultural Machinery</div>
+        </div>
+        <div class="tl-right">
+          <div class="tl-dot"></div>
+          <div class="tl-role" data-i18n="agco_r">Global Parts Demand &amp; Supply Optimization Specialist <span class="tl-badge" data-i18n="b_cur">Current</span></div>
+          <p class="tl-desc" data-i18n="agco_d">Spearheads global inventory and forecasting strategies across Massey Ferguson, Valtra and FENDT. Leads segmentation modeling, scenario analysis and advanced analytics (SQL, Tableau) to guide service level policies. Shapes strategic planning via simulation and "what-if" design using Orbit Servigistics (Advanced).</p>
+          <div class="tl-kpis"><span class="kpi">Orbit Servigistics</span><span class="kpi">SQL · Tableau</span><span class="kpi">Global Scope</span></div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-left">
+          <div class="tl-co">AXIA AGRO</div>
+          <div class="tl-period">Aug 2022 — Aug 2023</div>
+          <div class="tl-ind" data-i18n="axia_ind">Patria Investments · Agribusiness</div>
+        </div>
+        <div class="tl-right">
+          <div class="tl-dot"></div>
+          <div class="tl-role" data-i18n="axia_r">Demand &amp; Supply Planning Specialist</div>
+          <p class="tl-desc" data-i18n="axia_d">Led E2E planning and logistics strategy across animal nutrition, health and herbicides verticals. Designed and implemented S&amp;OP process aligning forecasts with supply capabilities. Managed logistics and tax network redesign to enhance efficiency and service level.</p>
+          <div class="tl-kpis"><span class="kpi">S&amp;OP Implementation</span><span class="kpi">IBP</span><span class="kpi">Network Strategy</span></div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-left">
+          <div class="tl-co">Adufértil</div>
+          <div class="tl-period">Apr 2018 — Jun 2021</div>
+          <div class="tl-ind" data-i18n="adu_ind">Fertilizer Production</div>
+        </div>
+        <div class="tl-right">
+          <div class="tl-dot"></div>
+          <div class="tl-role" data-i18n="adu_r">Manager of Operational Planning <span class="tl-badge">2020–2021</span></div>
+          <p class="tl-desc" data-i18n="adu_d">Led cross-functional S&amp;OP cycles, freight strategy and ERP rollout — achieving 80% reduction in operational failures. As Planning &amp; Demand Coordinator (2018–2020), drove 70% reduction in yard delays, secured 100% material availability and surpassed 90% delivery performance recognized by Raízen, Cutrale and Citrosuco.</p>
+          <div class="tl-kpis"><span class="kpi">70% delay reduction</span><span class="kpi">100% availability</span><span class="kpi">80% failure reduction</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-label reveal" data-i18n="sl_sk">Skills &amp; Tools</div>
+    <div class="sec-title reveal" data-i18n="st_sk">Technical competencies</div>
+    <div class="skills-layout reveal">
+      <div class="skill-group">
+        <div class="sg-title" data-i18n="sg1">Supply Chain Planning</div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-name">Demand Planning &amp; Forecasting</span><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Inventory Strategy</span><div class="skill-bar"><div class="skill-fill" data-w="92"></div></div></div>
+          <div class="skill-item"><span class="skill-name">S&amp;OP / IBP Leadership</span><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Scenario Planning</span><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Network &amp; Logistics Strategy</span><div class="skill-bar"><div class="skill-fill" data-w="82"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-title" data-i18n="sg2">Data &amp; Analytics</div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-name">Excel (Advanced)</span><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
+          <div class="skill-item"><span class="skill-name">SQL</span><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Tableau</span><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Power BI</span><div class="skill-bar"><div class="skill-fill" data-w="82"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Python (Basic–Intermediate)</span><div class="skill-bar"><div class="skill-fill" data-w="60"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-title" data-i18n="sg3">Leadership &amp; Strategy</div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-name">Cross-Functional Leadership</span><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Executive Reporting</span><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Digital Transformation</span><div class="skill-bar"><div class="skill-fill" data-w="82"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Budget &amp; Contract Negotiation</span><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Continuous Improvement</span><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="tools-grid reveal">
+      <div class="tool-card"><div class="tool-name">SQL</div><div class="tool-cat">Analytics</div><div class="tool-lvl"><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td"></span></div></div>
+      <div class="tool-card"><div class="tool-name">Tableau</div><div class="tool-cat">Visualization</div><div class="tool-lvl"><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td"></span></div></div>
+      <div class="tool-card"><div class="tool-name">Power BI</div><div class="tool-cat">Visualization</div><div class="tool-lvl"><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td"></span></div></div>
+      <div class="tool-card"><div class="tool-name">Excel</div><div class="tool-cat">Analytics · Advanced</div><div class="tool-lvl"><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td on"></span></div></div>
+      <div class="tool-card"><div class="tool-name">Python</div><div class="tool-cat">Scripting</div><div class="tool-lvl"><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td"></span><span class="td"></span></div></div>
+      <div class="tool-card"><div class="tool-name">SAP</div><div class="tool-cat">ERP</div><div class="tool-lvl"><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td"></span></div></div>
+      <div class="tool-card"><div class="tool-name">TOTVS</div><div class="tool-cat">ERP</div><div class="tool-lvl"><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td"></span></div></div>
+      <div class="tool-card"><div class="tool-name">Orbit Servigistics</div><div class="tool-cat">Planning · Advanced</div><div class="tool-lvl"><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td on"></span><span class="td on"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-label reveal" data-i18n="sl_edu">Education &amp; Credentials</div>
+    <div class="sec-title reveal" data-i18n="st_edu">Academic foundation</div>
+    <div class="edu-grid reveal">
+      <div class="edu-card"><span class="edu-badge" data-i18n="eb_cert">Certification</span><div class="edu-title">APICS CSCP</div><div class="edu-inst" data-i18n="edu1">ASCM — Association for Supply Chain Management</div><div class="edu-year">Nov 30, 2025</div></div>
+      <div class="edu-card"><span class="edu-badge" data-i18n="eb_mm">MicroMasters</span><div class="edu-title" data-i18n="edu2t">Supply Chain Technology &amp; Systems</div><div class="edu-inst">MITx — Massachusetts Institute of Technology</div><div class="edu-year">MIT</div></div>
+      <div class="edu-card"><span class="edu-badge" data-i18n="eb_bsc">B.Sc.</span><div class="edu-title" data-i18n="edu3t">Production Engineering</div><div class="edu-inst" data-i18n="edu_ufabc">Federal University of ABC — UFABC</div><div class="edu-year" data-i18n="edu_ug">Undergraduate</div></div>
+      <div class="edu-card"><span class="edu-badge" data-i18n="eb_bsc">B.Sc.</span><div class="edu-title" data-i18n="edu4t">Science &amp; Technology</div><div class="edu-inst" data-i18n="edu_ufabc">Federal University of ABC — UFABC</div><div class="edu-year" data-i18n="edu_ug">Undergraduate</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="philosophy">
+  <div class="wrap">
+    <div class="sec-label reveal" data-i18n="sl_ph">Philosophy of Value</div>
+    <div class="sec-title reveal" data-i18n="st_ph">Strategy meets aesthetics</div>
+    <div class="arethusa reveal">
+      <div class="arethusa-inner">
+        <div>
+          <div class="a-label" data-i18n="a_lbl">Parallel Venture · Fine Jewelry</div>
+          <div class="a-title" data-i18n="a_ttl">Arethusa Joias<br>Commercial Director</div>
+          <p class="a-desc" data-i18n="a_desc">Parallel to his corporate trajectory, Evandro cultivated an appreciation for timeless assets — businesses, investments, luxury products. At Arethusa Joias, he applies the same discipline of positioning, execution, and long-term value creation to a refined brand context.</p>
+          <a class="a-link" href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            @arethusajoias
+          </a>
+        </div>
+        <div class="a-quote">
+          <p data-i18n="a_q">Luxury is precision.<br>Luxury is intentionality.<br>Luxury is permanence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-label reveal" data-i18n="sl_co">Contact</div>
+    <div class="sec-title reveal" data-i18n="st_co">Get in touch</div>
+    <div class="contact-grid reveal">
+      <div class="cc"><div class="cc-label" data-i18n="cc1l">Email</div><div class="cc-value"><a href="mailto:ferrazcamargo@gmail.com">ferrazcamargo@gmail.com</a></div><div class="cc-sub" data-i18n="cc1s">Preferred contact</div></div>
+      <div class="cc"><div class="cc-label">LinkedIn</div><div class="cc-value"><a href="https://www.linkedin.com/in/evandro-ferraz-camargo-efc/" target="_blank" rel="noopener">evandro-ferraz-camargo-efc</a></div><div class="cc-sub" data-i18n="cc2s">Professional network</div></div>
+      <div class="cc"><div class="cc-label" data-i18n="cc3l">Location</div><div class="cc-value" data-i18n="cc3v">São Paulo, Brasil</div><div class="cc-sub" data-i18n="cc3s">Open to business travel · Global scope</div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>© 2026 Evandro Ferraz Camargo</span>
+  <span>São Paulo · Supply Chain Strategy</span>
+</footer>
 
 <script>
-  const themeBtn = document.getElementById("themeBtn");
-  const langBtn = document.getElementById("langBtn");
-  const nav = document.getElementById("nav");
+(function(){
+  const themeBtn=document.getElementById('themeBtn');
+  function setTheme(t){document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t);themeBtn.textContent=t==='light'?'Dark':'Light';}
+  setTheme(localStorage.getItem('theme')||'dark');
+  themeBtn.addEventListener('click',()=>setTheme(document.documentElement.getAttribute('data-theme')==='light'?'dark':'light'));
 
-  // Theme (persist) — applies to <html>
-  function setTheme(theme){
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-    // button shows the next action
-    const nextTheme = (theme === "light") ? "Dark" : "Light";
-    themeBtn.textContent = nextTheme;
-    themeBtn.setAttribute("aria-label", `Switch to ${nextTheme} theme`);
-    themeBtn.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
-  }
-
-  setTheme(localStorage.getItem("theme") || "dark");
-
-  themeBtn.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme") || "dark";
-    setTheme(current === "light" ? "dark" : "light");
-  });
-
-  // Language toggle (EN/PT)
-  const dict = {
-    en: {
-      nav_profile:"Profile",
-      nav_path:"Professional Path",
-      nav_foundation:"Foundation",
-      nav_value:"Philosophy",
-      nav_contact:"Contact",
-      tagline:"Strategic Mind. Refined Execution. Enduring Value.",
-
-      intro_1:"Some careers are built on opportunity. Others are built on discipline.",
-      intro_2:"Evandro Camargo belongs firmly to the second category.",
-      intro_3:"With over a decade of experience navigating complex global supply chains, he has built a reputation for combining analytical precision with strategic foresight. Working in multinational environments, leading cross-regional demand planning initiatives, and driving optimization programs across continents, he embraced one fundamental truth:",
-      quote:"Excellence is not accidental. It is engineered.",
-      intro_4:"His work spans advanced forecasting methodologies, inventory strategy, data science applications, executive-level reporting, and digital transformation. Leveraging SQL, Python, Tableau, and advanced enterprise planning systems, Evandro transforms structured data into disciplined decision frameworks.",
-      intro_5:"As an APICS CSCP-certified professional, he operates within globally benchmarked supply chain standards, combining analytical rigor with execution discipline to deliver measurable outcomes.",
-      intro_6:"But sophistication, for him, is not about complexity.",
-      intro_7:"It is about clarity.",
-      intro_8:"It is about making the complex feel natural.",
-
-      path_title:"Professional Path",
-      path_role_1_k:"Current",
-      path_role_1_t:"AGCO Parts · Global Parts Demand & Supply Optimization Specialist",
-      path_role_1_m:"Global inventory strategy · Forecasting architecture · Analytics-driven planning",
-      path_role_2_k:"Previous",
-      path_role_2_t:"AXIA AGRO (Patria Investments) · Demand & Supply Planning Specialist",
-      path_role_2_m:"End-to-end planning · IBP/S&OP implementation · Network strategy",
-      path_role_3_k:"Leadership",
-      path_role_3_t:"Adufértil · Manager of Operational Planning / Planning & Demand Coordinator",
-      path_role_3_m:"IBP/S&OP cycle · Procurement & logistics strategy · KPI improvement",
-      path_edu_k:"Education & credentials",
-      path_edu_t:"Academic Degrees & Certifications",
-      path_edu_m:"• B.Sc. in Production Engineering · Federal University of ABC (UFABC)<br>• B.Sc. in Science & Technology · Federal University of ABC (UFABC)<br>• MITx MicroMasters · Supply Chain Technology and Systems<br>• ASCM/APICS CSCP · Certified Supply Chain Professional (Nov 30, 2025)",
-
-      foundation_title:"The Strategic Foundation",
-      foundation_intro:"Throughout his journey in global planning leadership roles, Evandro developed:",
-      f_1:"A disciplined approach to decision-making",
-      f_2:"A global mindset with local execution sensitivity",
-      f_3:"Financial acumen rooted in measurable outcomes",
-      f_4:"Deep understanding of risk, variability, and value creation",
-      foundation_close:"Analytical yet intuitive. Strategic yet operational.",
-
-      value_title:"The Philosophy of Value",
-      value_p1:"Parallel to his corporate trajectory, Evandro cultivated an appreciation for timeless assets · businesses · investments · luxury products.",
-      value_p2:"This philosophy led to the creation of a refined brand vision · structure with elegance · logic with emotion · strategy with aesthetics.",
-      value_lead:"For him, luxury is not excess.",
-      value_quote:"Luxury is precision.<br />Luxury is intentionality.<br />Luxury is permanence.",
-      value_arethusa:'In the luxury sector, he serves as <strong>Commercial Director</strong> at <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">@arethusajoias</a> <span class="pill">Fine Jewelry</span>, applying the same discipline of positioning, execution, and long-term value creation to a refined brand context.',
-
-      contact_title:"Contact",
-      contact_loc:"São Paulo · Global Scope",
-      contact_linkedin:"LinkedIn:",
-      contact_email:"Email:",
-      contact_instagram:"Instagram:",
-      contact_role:"Commercial Director"
-    },
-
-    pt: {
-      nav_profile:"Perfil",
-      nav_path:"Caminho Profissional",
-      nav_foundation:"Base",
-      nav_value:"Filosofia",
-      nav_contact:"Contato",
-      tagline:"Mente Estratégica. Execução Refinada. Valor Duradouro.",
-
-      intro_1:"Algumas carreiras são construídas por oportunidade. Outras, por disciplina.",
-      intro_2:"Evandro Camargo pertence à segunda categoria.",
-      intro_3:"Com mais de uma década atuando em cadeias globais complexas, construiu reputação ao unir precisão analítica e visão estratégica. Em ambientes multinacionais, liderando iniciativas entre regiões e programas de otimização, consolidou uma convicção:",
-      quote:"Excelência não é acidental. É projetada.",
-      intro_4:"Seu trabalho abrange metodologias avançadas de forecast, estratégia de estoque, aplicações de dados, reporte executivo e transformação digital. Com SQL, Python, Tableau e sistemas avançados de planejamento, transforma dados estruturados em decisões com disciplina e consistência.",
-      intro_5:"Certificado APICS CSCP, atua alinhado a padrões globais de supply chain, combinando rigor analítico e disciplina de execução para gerar performance mensurável.",
-      intro_6:"Para ele, sofisticação não é sobre complexidade.",
-      intro_7:"É sobre clareza.",
-      intro_8:"É fazer o complexo parecer natural.",
-
-      path_title:"Caminho Profissional",
-      path_role_1_k:"Atual",
-      path_role_1_t:"AGCO Parts · Global Parts Demand & Supply Optimization Specialist",
-      path_role_1_m:"Estratégia global de estoque · Arquitetura de forecast · Planejamento orientado por analytics",
-      path_role_2_k:"Anterior",
-      path_role_2_t:"AXIA AGRO (Patria Investments) · Especialista de Planejamento de Demanda & Supply",
-      path_role_2_m:"Planejamento end-to-end · Implantação de IBP/S&OP · Estratégia de rede",
-      path_role_3_k:"Liderança",
-      path_role_3_t:"Adufértil · Gerente de Planejamento Operacional / Coord. de Planejamento e Demanda",
-      path_role_3_m:"IBP/S&OP · Estratégia de compras e logística · KPIs",
-      path_edu_k:"Formação & credenciais",
-      path_edu_t:"Formação acadêmica & certificações",
-      path_edu_m:"• Bacharel em Engenharia de Produção · Universidade Federal do ABC (UFABC)<br>• Bacharel em Ciência e Tecnologia · Universidade Federal do ABC (UFABC)<br>• MITx MicroMasters · Supply Chain Technology and Systems<br>• ASCM/APICS CSCP · Certified Supply Chain Professional (30 nov 2025)",
-
-      foundation_title:"A Base Estratégica",
-      foundation_intro:"Ao longo da atuação em planejamento global, desenvolveu:",
-      f_1:"Arquitetura disciplinada para tomada de decisão",
-      f_2:"Visão global com sensibilidade de execução local",
-      f_3:"Acúmen financeiro orientado a resultados mensuráveis",
-      f_4:"Leitura profunda de risco, variabilidade e criação de valor",
-      foundation_close:"Analítico e intuitivo. Estratégico e operacional.",
-
-      value_title:"A Filosofia de Valor",
-      value_p1:"Em paralelo à trajetória corporativa, cultivou apreço por ativos atemporais · negócios · investimentos · produtos de luxo.",
-      value_p2:"Essa visão sustentou uma construção de marca refinada · estrutura com elegância · lógica com emoção · estratégia com estética.",
-      value_lead:"Para ele, luxo não é excesso.",
-      value_quote:"Luxo é precisão.<br />Luxo é intencionalidade.<br />Luxo é permanência.",
-      value_arethusa:'No setor de luxo, atua como <strong>Diretor Comercial</strong> da <a href="https://www.instagram.com/arethusajoias/" target="_blank" rel="noopener">@arethusajoias</a> <span class="pill">Joalheria</span>, aplicando disciplina de posicionamento, execução e criação de valor de longo prazo.',
-
-      contact_title:"Contato",
-      contact_loc:"São Paulo · Global Scope",
-      contact_linkedin:"LinkedIn:",
-      contact_email:"Email:",
-      contact_instagram:"Instagram:",
-      contact_role:"Diretor Comercial"
-    }
+  const langBtn=document.getElementById('langBtn');
+  const T={
+    en:{eyebrow:'Supply Chain Strategy · Global Operations',tagline:'Strategic Supply Chain Leader with 10+ years driving global demand planning, inventory optimization, and digital transformation across multinational environments.',tag_loc:'São Paulo · Global',stat_y:'Years exp.',sl_about:'Profile',st_about:'Analytical precision.<br>Strategic foresight.',about_lead:'Some careers are built on opportunity. Others are built on discipline.',about_p1:'With over a decade navigating complex global supply chains, Evandro built a reputation for combining analytical precision with strategic foresight — leading cross-regional demand planning and driving optimization programs across continents.',about_q:'Excellence is not accidental. It is engineered.',about_p2:'His work spans advanced forecasting, inventory strategy, data science, executive reporting, and digital transformation. Leveraging SQL, Python, Tableau and enterprise planning systems, he transforms data into disciplined decision frameworks.',f1:'Global Demand &amp; Inventory Strategy',f2:'E2E Supply Chain Transformation',f3:'S&amp;OP / IBP Process Leadership',f4:'Scenario Planning &amp; Risk Mitigation',f5:'Analytics-Driven Decision Support',f6:'Cross-Functional Multinational Teams',c1:'Certified Supply Chain Professional · ASCM · Nov 2025',c2:'Supply Chain Technology &amp; Systems · MIT',c3t:'Production Engineering',c3:'Federal University of ABC — UFABC',c4t:'Languages',c4:'Portuguese (Native) · English (Professional)',sl_exp:'Professional Experience',st_exp:'Decade of global impact',agco_ind:'Agricultural Machinery',axia_ind:'Patria Investments · Agribusiness',adu_ind:'Fertilizer Production',agco_r:'Global Parts Demand &amp; Supply Optimization Specialist',b_cur:'Current',axia_r:'Demand &amp; Supply Planning Specialist',adu_r:'Manager of Operational Planning',agco_d:'Spearheads global inventory and forecasting strategies across Massey Ferguson, Valtra and FENDT. Leads segmentation modeling, scenario analysis and advanced analytics (SQL, Tableau) to guide service level policies. Shapes strategic planning via simulation and "what-if" design using Orbit Servigistics (Advanced).',axia_d:'Led E2E planning and logistics strategy across animal nutrition, health and herbicides verticals. Designed and implemented S&amp;OP process aligning forecasts with supply capabilities. Managed logistics and tax network redesign to enhance efficiency and service level.',adu_d:'Led cross-functional S&amp;OP cycles, freight strategy and ERP rollout — achieving 80% reduction in operational failures. As Planning &amp; Demand Coordinator (2018–2020), drove 70% reduction in yard delays, secured 100% material availability and surpassed 90% delivery performance recognized by Raízen, Cutrale and Citrosuco.',sl_sk:'Skills &amp; Tools',st_sk:'Technical competencies',sg1:'Supply Chain Planning',sg2:'Data &amp; Analytics',sg3:'Leadership &amp; Strategy',sl_edu:'Education &amp; Credentials',st_edu:'Academic foundation',eb_cert:'Certification',eb_mm:'MicroMasters',eb_bsc:'B.Sc.',edu1:'ASCM — Association for Supply Chain Management',edu2t:'Supply Chain Technology &amp; Systems',edu3t:'Production Engineering',edu4t:'Science &amp; Technology',edu_ufabc:'Federal University of ABC — UFABC',edu_ug:'Undergraduate',sl_ph:'Philosophy of Value',st_ph:'Strategy meets aesthetics',a_lbl:'Parallel Venture · Fine Jewelry',a_ttl:'Arethusa Joias<br>Commercial Director',a_desc:'Parallel to his corporate trajectory, Evandro cultivated an appreciation for timeless assets — businesses, investments, luxury products. At Arethusa Joias, he applies the same discipline of positioning, execution, and long-term value creation to a refined brand context.',a_q:'Luxury is precision.<br>Luxury is intentionality.<br>Luxury is permanence.',sl_co:'Contact',st_co:'Get in touch',cc1l:'Email',cc1s:'Preferred contact',cc2s:'Professional network',cc3l:'Location',cc3v:'São Paulo, Brasil',cc3s:'Open to business travel · Global scope'},
+    pt:{eyebrow:'Estratégia em Supply Chain · Operações Globais',tagline:'Líder Estratégico em Supply Chain com mais de 10 anos de experiência em planejamento global de demanda, otimização de estoque e transformação digital em ambientes multinacionais.',tag_loc:'São Paulo · Global',stat_y:'Anos de exp.',sl_about:'Perfil',st_about:'Precisão analítica.<br>Visão estratégica.',about_lead:'Algumas carreiras são construídas por oportunidade. Outras, por disciplina.',about_p1:'Com mais de uma década atuando em cadeias globais complexas, Evandro construiu reputação ao unir precisão analítica e visão estratégica — liderando iniciativas entre regiões e programas de otimização em escala global.',about_q:'Excelência não é acidental. É projetada.',about_p2:'Seu trabalho abrange forecast avançado, estratégia de estoque, aplicações de dados, reporte executivo e transformação digital. Com SQL, Python, Tableau e sistemas de planejamento, transforma dados em decisões disciplinadas.',f1:'Estratégia Global de Demanda e Estoque',f2:'Transformação E2E em Supply Chain',f3:'Liderança de S&amp;OP / IBP',f4:'Planejamento de Cenários e Riscos',f5:'Decisões Orientadas por Analytics',f6:'Times Multifuncionais e Multinacionais',c1:'Certified Supply Chain Professional · ASCM · Nov 2025',c2:'Supply Chain Technology &amp; Systems · MIT',c3t:'Engenharia de Produção',c3:'Universidade Federal do ABC — UFABC',c4t:'Idiomas',c4:'Português (Nativo) · Inglês (Profissional)',sl_exp:'Experiência Profissional',st_exp:'Década de impacto global',agco_ind:'Maquinário Agrícola',axia_ind:'Patria Investments · Agronegócio',adu_ind:'Produção de Fertilizantes',agco_r:'Global Parts Demand &amp; Supply Optimization Specialist',b_cur:'Atual',axia_r:'Especialista de Planejamento de Demanda &amp; Supply',adu_r:'Gerente de Planejamento Operacional',agco_d:'Lidera estratégias globais de estoque e forecast para Massey Ferguson, Valtra e FENDT. Conduz modelagem de segmentação, análise de cenários e analytics avançado (SQL, Tableau) para políticas de nível de serviço. Define planejamento estratégico com simulações "what-if" via Orbit Servigistics (Avançado).',axia_d:'Liderou planejamento e estratégia logística E2E para nutrição animal, saúde e herbicidas. Projetou e implementou S&amp;OP alinhando forecast à capacidade de supply. Gerenciou redesenho da rede logística e fiscal.',adu_d:'Liderou ciclos de S&amp;OP multifuncionais, estratégia de frete e rollout de ERP — atingindo 80% de redução em falhas operacionais. Como Coordenador (2018–2020), alcançou 70% de redução em atrasos de pátio, 100% de disponibilidade de materiais e superou 90% de performance de entrega reconhecida por Raízen, Cutrale e Citrosuco.',sl_sk:'Competências e Ferramentas',st_sk:'Competências técnicas',sg1:'Planejamento em Supply Chain',sg2:'Dados &amp; Analytics',sg3:'Liderança &amp; Estratégia',sl_edu:'Formação &amp; Credenciais',st_edu:'Base acadêmica',eb_cert:'Certificação',eb_mm:'MicroMasters',eb_bsc:'Bacharelado',edu1:'ASCM — Association for Supply Chain Management',edu2t:'Supply Chain Technology &amp; Systems',edu3t:'Engenharia de Produção',edu4t:'Ciência e Tecnologia',edu_ufabc:'Universidade Federal do ABC — UFABC',edu_ug:'Graduação',sl_ph:'Filosofia de Valor',st_ph:'Estratégia e estética',a_lbl:'Empreendimento Paralelo · Joalheria',a_ttl:'Arethusa Joias<br>Diretor Comercial',a_desc:'Em paralelo à trajetória corporativa, Evandro cultivou apreço por ativos atemporais — negócios, investimentos, produtos de luxo. Na Arethusa Joias, aplica a mesma disciplina de posicionamento, execução e criação de valor de longo prazo.',a_q:'Luxo é precisão.<br>Luxo é intencionalidade.<br>Luxo é permanência.',sl_co:'Contato',st_co:'Entre em contato',cc1l:'E-mail',cc1s:'Contato preferencial',cc2s:'Rede profissional',cc3l:'Localização',cc3v:'São Paulo, Brasil',cc3s:'Disponível para viagens · Atuação global'}
   };
+  function setLang(lang){localStorage.setItem('lang',lang);document.documentElement.lang=lang;const t=T[lang];document.querySelectorAll('[data-i18n]').forEach(el=>{const v=t[el.dataset.i18n];if(v!==undefined)el.innerHTML=v;});langBtn.textContent=lang==='en'?'PT':'EN';}
+  setLang(localStorage.getItem('lang')||'en');
+  langBtn.addEventListener('click',()=>setLang(localStorage.getItem('lang')==='pt'?'en':'pt'));
 
-  function setLang(lang){
-    localStorage.setItem("lang", lang);
-    document.documentElement.lang = lang;
+  const menuBtn=document.getElementById('menuBtn');
+  const navLinks=document.querySelector('.nav-links');
+  menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.querySelector('svg').innerHTML=open?'<line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/>':'<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';});
+  document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.querySelector('svg').innerHTML='<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';}));
 
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      const val = dict[lang][key];
-      if(!val) return;
+  const secs=document.querySelectorAll('section[id]');
+  const as=document.querySelectorAll('.nav-links a');
+  const navObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)as.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));});},{threshold:0.25,rootMargin:'-58px 0px 0px 0px'});
+  secs.forEach(s=>navObs.observe(s));
 
-      // allow HTML in specific blocks
-      if(key === "value_arethusa" || key === "value_quote" || key === "path_edu_m"){
-        el.innerHTML = val;
-      } else {
-        el.textContent = val;
-      }
-    });
+  const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 
-    const nextLang = (lang === "en") ? "PT" : "EN";
-    langBtn.textContent = nextLang;
-    langBtn.setAttribute("aria-label", `Switch language to ${nextLang}`);
-    langBtn.setAttribute("aria-pressed", lang === "pt" ? "true" : "false");
-  }
-
-  setLang(localStorage.getItem("lang") || "en");
-
-  langBtn.addEventListener("click", () => {
-    const current = localStorage.getItem("lang") || "en";
-    setLang(current === "en" ? "pt" : "en");
-  });
-
-  // Navbar shrink
-  window.addEventListener("scroll", () => {
-    if(window.scrollY > 18) nav.classList.add("shrink");
-    else nav.classList.remove("shrink");
-  });
-
-  // Active link by section
-  const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
-  const sections = ["profile","path","foundation","value","contact"].map(id => document.getElementById(id));
-
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        const id = entry.target.id;
-        navLinks.forEach(a => a.classList.toggle("active", a.dataset.nav === id));
-      }
-    });
-  }, { threshold: 0.35 });
-
-  sections.forEach(s => s && io.observe(s));
-
-  // Section reveal
-  const reveal = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if(e.isIntersecting) e.target.classList.add("in");
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll("[data-section], .section").forEach(el => reveal.observe(el));
+  const barObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.querySelectorAll('.skill-fill').forEach(b=>b.style.width=b.dataset.w+'%');});},{threshold:0.2});
+  document.querySelectorAll('.skills-layout').forEach(el=>barObs.observe(el));
+})();
 </script>
 </body>
 </html>
